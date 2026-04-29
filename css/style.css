@@ -519,3 +519,63 @@ footer {
   .section { padding: 56px 0; }
   .strip-quote blockquote { font-size: 1rem; }
 }
+
+/* ════════════════════════════════════════════════════════════
+   MOBILNA OPTIMIZACIJA — minimalne, sigurne izmjene
+   Samo mobile (≤ 860px). Desktop/tablet 100% netaknut.
+   ════════════════════════════════════════════════════════════ */
+
+@media (max-width: 860px) {
+
+  /* ── two-col.flip: foto-wrap ide ispod text-blocka (ne iznad) ──
+     Original: column-reverse → slika gore, tekst dolje.
+     Ispravak: column → tekst gore, slika dolje.
+     Na "o meni kratko" sekciji ovo znači: h2 → tekst → slika → CTA
+  ────────────────────────────────────────────────────────────── */
+  .two-col.flip {
+    flex-direction: column;
+  }
+
+  /* ── CTA gumbi — veći tap target na mobileu ─────────────────
+     Samo padding i font-size, ništa drugo.
+  ────────────────────────────────────────────────────────────── */
+  .btn {
+    padding: 16px 34px;
+    font-size: .76rem;
+  }
+
+  /* Akcije u text-blocku — vertikalno posložene, puna širina */
+  .text-block .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .text-block .actions .btn {
+    text-align: center;
+  }
+  .text-block .actions .link-arrow {
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  /* Završni CTA sekcija — gumbi puna širina */
+  .cta-btns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .cta-btns .btn {
+    text-align: center;
+    padding: 17px 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Hero akcije na malim ekranima */
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .hero-actions .btn { text-align: center; }
+  .hero-actions .link-arrow { justify-content: center; padding: 8px 0; }
+}
