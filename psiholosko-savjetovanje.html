@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Psihološko savjetovanje Velika Gorica | Balans — Ana Leder</title>
+  <meta name="description" content="Psihološko savjetovanje u Velikoj Gorici - stručna podrška za stres, životne krize, važne odluke i svakodnevne teškoće. Ana Leder. Uživo i online." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://psihoterapija-balans.hr/psiholosko-savjetovanje.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Psihološko savjetovanje Velika Gorica | Balans - Ana Leder" />
+  <meta property="og:description" content="Stručna podrška za stres, životne krize, važne odluke i svakodnevne teškoće. Uživo i online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://psihoterapija-balans.hr/psiholosko-savjetovanje.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+
+    /* ══════════════════════════════════════
+       HERO — podstranica
+    ══════════════════════════════════════ */
+    #hero-sub {
+      padding-top: var(--nav-h);
+      background: var(--canvas);
+      position: relative; overflow: hidden;
+    }
+    .hero-sub-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(40px, 6vw, 80px);
+      padding: clamp(60px, 9vw, 120px) 0;
+    }
+    .hero-sub-text .label { margin-bottom: 18px; }
+    .hero-sub-text h1     { margin-bottom: 16px; }
+    .hero-sub-text h1 em  { font-style: italic; color: var(--moss); }
+    .hero-sub-text .hero-sub-lead {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(.98rem, 1.6vw, 1.22rem);
+      color: var(--tan); line-height: 1.6; margin-bottom: 32px; max-width: 44ch;
+    }
+    .hero-sub-img img {
+      width: 100%; height: clamp(300px, 40vw, 480px);
+      object-fit: cover;
+      border-radius: 4px 52px 4px 52px;
+      filter: saturate(.72);
+    }
+    /* Dekorativni okvir */
+    .hero-sub-img { position: relative; }
+    .hero-sub-img::before {
+      content: ''; position: absolute; top: -16px; left: -16px;
+      width: 48%; height: 48%;
+      border-top: 1px solid var(--clay-l); border-left: 1px solid var(--clay-l);
+    }
+
+    @media (max-width: 860px) {
+      .hero-sub-inner { grid-template-columns: 1fr; padding: 48px 0 40px; gap: 36px; }
+      .hero-sub-img img { height: clamp(220px, 55vw, 340px); }
+      .hero-sub-img::before { display: none; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA 2 — ŠTO JE SAVJETOVANJE
+    ══════════════════════════════════════ */
+    #what-is { background: var(--cream); }
+
+    .what-is-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: start;
+    }
+    .what-is-text h2 { margin-bottom: 22px; }
+    .what-is-text p + p { margin-top: 16px; }
+
+    /* mini lista u sekciji 2 */
+    .mini-list { list-style: none; margin-top: 24px; }
+    .mini-list li {
+      display: grid; grid-template-columns: 18px 1fr; gap: 12px;
+      align-items: start; padding: 11px 0;
+      border-bottom: 1px solid var(--clay-l);
+      font-size: .88rem; color: var(--muted); font-weight: 300; line-height: 1.65;
+    }
+    .mini-list li:first-child { border-top: 1px solid var(--clay-l); }
+    .mini-list li::before { content: '→'; color: var(--moss); font-size: .8rem; margin-top: 2px; }
+
+    .what-is-img img {
+      width: 100%; height: clamp(300px, 40vw, 460px);
+      object-fit: cover; object-position: center center;
+      border-radius: 52px 4px 52px 4px;
+      filter: saturate(.7);
+      margin-top: clamp(20px, 4vw, 60px); /* pomak dolje da se centrira */
+    }
+
+    @media (max-width: 860px) {
+      .what-is-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA 3 — ZA KOGA
+    ══════════════════════════════════════ */
+    #for-whom { background: var(--canvas); }
+
+    .for-whom-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: center;
+    }
+    .for-whom-text h2 { margin-bottom: 22px; }
+    .for-whom-text p + p { margin-top: 16px; }
+    .for-whom-text .italic-end {
+      margin-top: 24px; padding-top: 22px;
+      border-top: 1px solid var(--clay-l);
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: .95rem; color: var(--moss); line-height: 1.65;
+    }
+
+    .for-whom-img img {
+      width: 100%; height: clamp(280px, 38vw, 440px);
+      object-fit: cover;
+      border-radius: 4px 52px 4px 52px;
+      filter: saturate(.7);
+    }
+
+    @media (max-width: 860px) {
+      .for-whom-inner { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA 4 — S ČIME MOŽE POMOĆI
+    ══════════════════════════════════════ */
+    #can-help { background: var(--cream); }
+
+    .help-header { margin-bottom: 52px; max-width: 520px; }
+    .help-header h2 { margin-top: 16px; margin-bottom: 14px; }
+
+    /* 5 kartica — 3+2 layout */
+    .help-grid-5 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--clay-l);
+      border: 1px solid var(--clay-l); border-radius: 8px; overflow: hidden;
+    }
+    /* Zadnje 2 kartice centriramo u redu */
+    .help-grid-5 .help-card:nth-child(4),
+    .help-grid-5 .help-card:nth-child(5) {
+      /* ostaju u gridu, izgledaju uniformno */
+    }
+
+    .help-card {
+      background: var(--cream);
+      padding: clamp(24px, 3vw, 40px);
+      transition: background .24s;
+    }
+    .help-card:hover { background: var(--canvas); }
+    .help-card-title {
+      font-family: 'Nunito', sans-serif; font-size: .7rem; font-weight: 400;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 10px; display: block;
+    }
+    .help-card p { font-size: .87rem; margin: 0; }
+
+    @media (max-width: 860px) {
+      .help-grid-5 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .help-grid-5 { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA 5 — SAVJETOVANJE VS TERAPIJA
+    ══════════════════════════════════════ */
+    #vs-therapy { background: var(--canvas); }
+
+    .vs-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: start;
+    }
+
+    .vs-col h2 { margin-bottom: 22px; }
+    .vs-col h3 {
+      font-family: 'Nunito', sans-serif; font-size: .72rem; font-weight: 400;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 16px;
+    }
+    .vs-col p + p { margin-top: 14px; }
+
+    .vs-card {
+      padding: 28px 32px;
+      border-radius: 8px;
+      border: 1px solid var(--clay-l);
+    }
+    .vs-card.savjetovanje { background: var(--cream); }
+    .vs-card.terapija     { background: var(--cream); margin-top: 0; }
+
+    .vs-card .vs-title {
+      font-family: 'Nunito', sans-serif; font-size: .68rem; font-weight: 400;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 12px; display: block;
+    }
+    .vs-card p { font-size: .87rem; margin: 0; }
+    .vs-card .mini-list { margin-top: 16px; }
+
+    .vs-divider {
+      text-align: center; padding: 20px 0;
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: .88rem; color: var(--clay);
+    }
+
+    .vs-note {
+      margin-top: 24px; padding: 20px 24px;
+      background: var(--canvas);
+      border-left: 3px solid var(--moss);
+      border-radius: 0 8px 8px 0;
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: .92rem; color: var(--moss); line-height: 1.65;
+    }
+
+    @media (max-width: 860px) {
+      .vs-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA 6 — KAKO IZGLEDA
+    ══════════════════════════════════════ */
+    #how-it-looks { background: var(--cream); }
+
+    /* ══════════════════════════════════════
+       SEKCIJA 7 — CIJENA I FORMAT
+    ══════════════════════════════════════ */
+    #price { background: var(--canvas); }
+
+    .price-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: center;
+    }
+    .price-text h2 { margin-bottom: 22px; }
+    .price-text p + p { margin-top: 16px; }
+
+    .price-card {
+      background: var(--cream);
+      border: 1px solid var(--clay-l);
+      border-radius: 12px;
+      padding: clamp(32px, 4vw, 52px);
+      text-align: center;
+    }
+    .price-label-tag {
+      font-family: 'Nunito', sans-serif; font-size: .64rem; font-weight: 400;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 16px; display: block;
+    }
+    .price-main {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--dark); line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .price-sub {
+      font-family: 'Nunito', sans-serif; font-size: .82rem; font-weight: 300;
+      color: var(--muted); line-height: 1.8; margin-bottom: 28px;
+    }
+    .price-divider { width: 32px; height: 1px; background: var(--clay); margin: 0 auto 24px; }
+    .price-details { list-style: none; }
+    .price-details li {
+      font-size: .85rem; color: var(--muted); padding: 8px 0;
+      border-bottom: 1px solid var(--clay-l);
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .price-details li:last-child { border: none; }
+    .price-details li::before { content: '·'; color: var(--moss); font-size: 1.2rem; }
+
+    @media (max-width: 860px) {
+      .price-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA 8 — O MENI
+    ══════════════════════════════════════ */
+    #about { background: var(--cream); }
+
+    /* ══════════════════════════════════════
+       ZAVRŠNI CTA
+    ══════════════════════════════════════ */
+    #cta-final {
+      padding: clamp(80px, 10vw, 140px) 0;
+      background: var(--canvas); position: relative; overflow: hidden;
+    }
+    #cta-final::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('slike/cta-bg.jpg') center/cover no-repeat;
+      opacity: .06; filter: saturate(.2);
+    }
+    .cta-box {
+      position: relative; z-index: 1;
+      max-width: 600px; margin: 0 auto; text-align: center;
+    }
+    .cta-box h2 { margin-bottom: 20px; }
+    .cta-box p  { max-width: 52ch; margin: 0 auto; }
+    .cta-btns {
+      margin-top: 40px;
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<nav id="site-nav">
+  <div class="wrap nav-i">
+    <a href="index.html" class="nav-logo" aria-label="Balans Ana Leder — povratak na naslovnicu">
+      <img src="slike/PsihoterapijaBalanslogo.svg" alt="Balans — Ana Leder, psihoterapija i savjetovanje" width="52" height="52" />
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Otvori izbornik" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html">Naslovna</a></li>
+      <li class="has-dropdown">
+        <a href="#" aria-haspopup="true">Usluge</a>
+        <ul class="dropdown" role="list">
+          <li><a href="individualna-psihoterapija.html">Individualna psihoterapija</a></li>
+          <li><a href="partnerska-psihoterapija.html">Partnerska psihoterapija</a></li>
+          <li><a href="psiholosko-savjetovanje.html">Psihološko savjetovanje</a></li>
+        </ul>
+      </li>
+      <li><a href="o-meni.html">O meni</a></li>
+      <li><a href="proces-pitanja.html">Proces</a></li>
+      <li><a href="kontakt.html" class="ncta">Dogovorite razgovor</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /HEADER -->
+
+
+<main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 1 — HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero-sub" aria-label="Psihološko savjetovanje">
+    <div class="wrap">
+      <div class="hero-sub-inner">
+
+        <div class="hero-sub-text rv">
+          <span class="balans-badge">Balans · Ana Leder</span>
+          <span class="label">Usluge · Psihološko savjetovanje</span>
+          <h1>Psihološko savjetovanje<br><em>Velika Gorica</em></h1>
+          <p class="hero-sub-lead">Ponekad je dovoljno imati prostor gdje možete stati, razmisliti i biti saslušani.</p>
+          <a href="kontakt.html" class="btn btn-dark">Dogovorite prvi razgovor</a>
+        </div>
+
+        <div class="hero-sub-img rv">
+          <!--
+            PLACEHOLDER — zamijeni s pravom slikom:
+            <img src="slike/savjetovanje-hero.jpg" alt="Psihološko savjetovanje — prostor za razgovor" width="700" height="480" />
+          -->
+          <img
+            src="slike/Naturehappy.avif"
+            alt="Psihološko savjetovanje — prostor za razmišljanje i razgovor"
+            width="700" height="480" loading="eager"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 2 — ŠTO JE PSIHOLOŠKO SAVJETOVANJE
+  ══════════════════════════════════════════════════════════ -->
+  <section id="what-is" class="section" aria-label="Što je psihološko savjetovanje">
+    <div class="wrap">
+      <div class="what-is-grid">
+
+        <div class="what-is-text rv">
+          <span class="label">O savjetovanju</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Što je psihološko savjetovanje?</h2>
+          <p>Psihološko savjetovanje je oblik stručne psihološke podrške usmjeren na aktualne poteškoće i konkretne životne situacije. Najčešće je riječ o kraćem procesu koji pomaže u pronalaženju jasnoće, olakšanja i konkretnih načina nošenja sa svakodnevnim teškoćama.</p>
+          <p>Fokus je na razumijevanju trenutne situacije i jačanju osobnih resursa, uvida i vještina, bez nužnog ulaženja u dublje uzroke ili iskustva iz prošlosti.</p>
+          <p>Savjetovanje može pomoći kada:</p>
+          <ul class="mini-list">
+            <li>Se suočavate sa stresom i preopterećenošću</li>
+            <li>Trebate podršku pri donošenju važnih odluka</li>
+            <li>Prolazite kroz partnerske ili obiteljske dileme</li>
+            <li>Ste u kriznoj životnoj situaciji</li>
+            <li>Želite ojačati strategije komunikacije ili nošenja s izazovima</li>
+          </ul>
+        </div>
+
+        <div class="rv">
+          <!--
+            PLACEHOLDER:
+            <img src="slike/savjetovanje-sto-je.jpg" alt="Što je psihološko savjetovanje" width="600" height="460" loading="lazy" />
+          -->
+          <img
+            src="slike/„Balans nije život bez napetosti. Balans je sposobnost vraćanja u stabilnost..jpg"
+            alt="Siguran prostor za savjetovanje i podršku"
+            width="600" height="460" loading="lazy"
+            style="width:100%; height:clamp(300px,40vw,460px); object-fit:cover; border-radius:52px 4px 52px 4px; filter:saturate(.7);"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 3 — ZA KOGA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="for-whom" class="section" aria-label="Za koga je psihološko savjetovanje u Velikoj Gorici">
+    <div class="wrap">
+      <div class="for-whom-inner">
+
+        <div class="rv">
+          <!--
+            PLACEHOLDER:
+            <img src="slike/savjetovanje-za-koga.jpg" alt="Za koga je psihološko savjetovanje" width="600" height="440" loading="lazy" />
+          -->
+          <img
+            src="slike/Psihoterapijabalansnature.jpeg"
+            alt="Savjetovanje za sve koji osjećaju da im treba podrška"
+            width="600" height="440" loading="lazy"
+            style="width:100%; height:clamp(280px,38vw,440px); object-fit:cover; border-radius:52px 4px 52px 4px; filter:saturate(.7);"
+          />
+        </div>
+
+        <div class="for-whom-text rv">
+          <span class="label">Za koga</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Za koga je psihološko savjetovanje u Velikoj Gorici?</h2>
+          <p>Psihološko savjetovanje namijenjeno je svima koji osjećaju da im je u ovom trenutku potrebna stručna podrška, ali možda nisu sigurni trebaju li terapiju ili jednostavno žele kraći, fokusiraniji proces.</p>
+          <p>Najčešće mi dolaze ljudi koji su pred važnom životnom odlukom i trebaju prostor za razmišljanje. Oni koji su pod pojačanim stresom na poslu ili u obitelji. Oni koji prolaze kroz partnersku ili obiteljsku krizu i žele podršku prije nego što situacija postane nepodnošljiva. Ili oni koji tek žele razgovarati s nekim tko će ih saslušati bez prosuđivanja.</p>
+          <p class="italic-end">Ne morate znati točno što trebate. Dovoljno je da osjećate da vam je potreban prostor i podrška.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 4 — S ČIME MOŽE POMOĆI
+  ══════════════════════════════════════════════════════════ -->
+  <section id="can-help" class="section" aria-label="S čime može pomoći psihološko savjetovanje">
+    <div class="wrap">
+
+      <div class="help-header rv">
+        <span class="label">Podrška</span>
+        <h2>Psihološko savjetovanje može biti podrška kada…</h2>
+      </div>
+
+      <div class="help-grid-5">
+
+        <div class="help-card rv">
+          <span class="help-card-title">Stres i preopterećenost</span>
+          <p>Osjećate da ne stižete, da ste stalno pod pritiskom ili da više ne znate kako pronaći ravnotežu između obaveza i sebe.</p>
+        </div>
+
+        <div class="help-card rv">
+          <span class="help-card-title">Važna životna odluka</span>
+          <p>Promjena posla, selidba, kraj ili početak odnosa, obiteljske promjene — situacije u kojima trebate prostor da čujete sebe i razmislite jasno.</p>
+        </div>
+
+        <div class="help-card rv">
+          <span class="help-card-title">Partnerska ili obiteljska kriza</span>
+          <p>Konflikti, nerazumijevanje ili promjene u dinamici odnosa koje vas iscrpljuju i za koje trebate podršku izvana.</p>
+        </div>
+
+        <div class="help-card rv">
+          <span class="help-card-title">Krizna životna situacija</span>
+          <p>Gubitak, bolest, razvod, neizvjesnost — trenutci kada vam treba oslonac i konkretan način nošenja s onim što prolazite.</p>
+        </div>
+
+        <div class="help-card rv">
+          <span class="help-card-title">Jačanje vlastitih resursa</span>
+          <p>Niste u krizi, ali osjećate da biste mogli funkcionirati bolje — s više mira, jasnoće i zdravijih strategija suočavanja.</p>
+        </div>
+
+        <div class="help-card rv">
+          <span class="help-card-title">Osobni rast i bolje razumijevanje sebe</span>
+          <p>Kada ne tražite dublju analizu nego želite bolje upoznati svoje obrasce, potrebe i vrijednosti.</p>
+        </div>
+
+  
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 5 — SAVJETOVANJE VS PSIHOTERAPIJA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="vs-therapy" class="section" aria-label="Razlika između psihološkog savjetovanja i psihoterapije">
+    <div class="wrap">
+
+      <div style="margin-bottom:52px;" class="rv">
+        <span class="label">Usporedba</span>
+        <div class="rule" style="margin-top:14px;"></div>
+        <h2>Koja je razlika između psihološkog savjetovanja i psihoterapije?</h2>
+      </div>
+
+      <div class="vs-grid">
+
+        <div class="rv">
+          <div class="vs-card savjetovanje">
+            <span class="vs-title">Psihološko savjetovanje</span>
+            <p>Kraći, fokusiraniji proces usmjeren na aktualne poteškoće i konkretne životne situacije. Pomaže u pronalaženju jasnoće i praktičnih strategija za svakodnevne teškoće.</p>
+            <ul class="mini-list">
+              <li>Suočavanje sa stresom i preopterećenošću</li>
+              <li>Donošenje važnih odluka</li>
+              <li>Partnerske ili obiteljske dileme</li>
+              <li>Krizne životne situacije</li>
+              <li>Jačanje strategija suočavanja</li>
+            </ul>
+          </div>
+          <div class="vs-note">
+            Ako niste sigurni što vam više odgovara, to možemo zajedno procijeniti na prvom susretu.
+          </div>
+        </div>
+
+        <div class="rv">
+          <div class="vs-card terapija">
+            <span class="vs-title">Psihoterapija</span>
+            <p>Dublji i često dugoročniji proces. Za razliku od savjetovanja, psihoterapija ne ostaje samo na trenutnom problemu, nego istražuje uzroke poteškoća, iskustva iz prošlosti, temeljna uvjerenja i obrasce koji se ponavljaju kroz život i odnose.</p>
+            <p style="margin-top:14px;">Cilj psihoterapije nije samo trenutno olakšanje, već trajnije promjene, veće samorazumijevanje i kvalitetniji odnos sa sobom i drugima.</p>
+          </div>
+          <div style="margin-top:8px;">
+            <a href="individualna-psihoterapija.html" class="link-arrow">Saznajte više o individualnoj psihoterapiji</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 6 — KAKO IZGLEDA SAVJETOVANJE
+  ══════════════════════════════════════════════════════════ -->
+  <section id="how-it-looks" class="section" aria-label="Kako izgleda psihološko savjetovanje u Velikoj Gorici">
+    <div class="wrap">
+      <div class="two-col">
+
+        <div class="text-block rv">
+          <span class="label">Proces</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Kako izgleda psihološko savjetovanje u Velikoj Gorici?</h2>
+          <div class="steps" style="margin-top:36px;">
+            <div class="step">
+              <span class="step-n">01</span>
+              <div class="step-b">
+                <h4>Prvi susret</h4>
+                <p>Razgovaramo o tome što vas dovodi, što vam je trenutno najteže i što biste željeli promijeniti ili razjasniti. Slušam s pažnjom i bez osude, nema točnih ili netočnih odgovora.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-n">02</span>
+              <div class="step-b">
+                <h4>Dogovor o okviru</h4>
+                <p>Zajedno procjenjujemo koliko susreta ima smisla i u kojem smjeru ići. Savjetovanje je fleksibilno, može biti nekoliko susreta usmjerenih na konkretnu situaciju ili duži proces, ovisno o vašim potrebama.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-n">03</span>
+              <div class="step-b">
+                <h4>Kroz proces</h4>
+                <p>Savjetovanje donosi više jasnoće, konkretne uvide i praktične strategije koje možete primijeniti u svakodnevnom životu, korak po korak, u vašem ritmu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-wrap circle-accent rv">
+          <!--
+            PLACEHOLDER:
+            <img class="photo-main photo-r3" src="slike/savjetovanje-proces.jpg" alt="Savjetovanje — korak po korak" width="600" height="520" loading="lazy" />
+          -->
+          <img
+            class="photo-main photo-r3"
+            src="slike/PsihoterapijaBalansVelikaGoricainterije.jpeg"
+            alt="Psihološko savjetovanje — siguran prostor za razgovor"
+            width="600" height="520" loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 7 — CIJENA I FORMAT
+  ══════════════════════════════════════════════════════════ -->
+  <section id="price" class="section" aria-label="Psihološko savjetovanje u Velikoj Gorici — uživo i online">
+    <div class="wrap">
+      <div class="price-grid">
+
+        <div class="price-text rv">
+          <span class="label">Cijena i format</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Psihološko savjetovanje u Velikoj Gorici — uživo i online</h2>
+          <p>Susret traje 60 minuta. Psihološko savjetovanje dostupno je uživo u Velikoj Gorici i online, ovisno o vašim mogućnostima i dogovoru.</p>
+          <p>Za informacije o cijeni slobodno se javite putem kontakt forme ili telefona, odgovorit ću vam u najkraćem mogućem roku.</p>
+        </div>
+
+        <div class="price-card rv">
+          <span class="price-label-tag">Psihološko savjetovanje</span>
+          <div class="price-amount" style="font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,3.6rem); color:var(--dark); line-height:1; margin-bottom:4px;"><sup style="font-size:1.2rem; vertical-align:super;">€</sup>50</div>
+          <span class="price-unit" style="font-family:'Nunito',sans-serif; font-size:.72rem; font-weight:300; color:var(--muted); letter-spacing:.1em; margin-bottom:28px; display:block;">po susretu · 60 minuta</span>
+          <div class="price-divider"></div>
+          <ul class="price-details">
+            <li>Uživo u Velikoj Gorici</li>
+            <li>Online — bez obzira na lokaciju</li>
+            <li>60 minuta po susretu</li>
+            <li>Fleksibilan broj susreta</li>
+          </ul>
+          <div style="margin-top:28px;">
+            <a href="kontakt.html" class="btn btn-dark" style="display:block; text-align:center;">Dogovorite razgovor</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 8 — O MENI
+  ══════════════════════════════════════════════════════════ -->
+  <section id="about" class="section" aria-label="Ana Leder — savjetovanje i psihoterapija u Velikoj Gorici">
+    <div class="wrap">
+      <div class="two-col flip">
+
+        <div class="photo-wrap frame-br rv">
+          <!--
+            PLACEHOLDER — Anina fotografija:
+            <img class="photo-main photo-r2" src="slike/ana-leder.jpg" alt="Ana Leder, psihoterapeutkinja i savjetovateljica u Velikoj Gorici" width="600" height="540" loading="lazy" />
+          -->
+          <img
+            class="photo-main photo-r2"
+            src="slike/PsihoterapijaBalansVelikaGoricaAnaLeder.jpg"
+            alt="Ana Leder, psihoterapeutkinja i savjetovateljica u Velikoj Gorici"
+            width="600" height="540" loading="lazy"
+          />
+        </div>
+
+        <div class="text-block rv">
+          <span class="label">O meni</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Ana Leder — savjetovanje i psihoterapija u Velikoj Gorici</h2>
+          <p>Ljudi i njihove priče oduvijek su mi bili fascinantni, ono što se događa ispod površine i načini na koje si možemo pomoći da živimo lakše i autentičnije. Vjerujem da svaka osoba ima unutarnje resurse za rast, čak i kada se osjeća izgubljeno ili preopterećeno.</p>
+          <p>U savjetovanju mi je važno stvoriti siguran i podržavajući prostor u kojem možete razmišljati naglas, biti saslušani i pronaći vlastiti put prema olakšanju.</p>
+          <div class="about-cred">Edukacija: <strong>Logoterapija</strong> &nbsp;·&nbsp; Pristup: <strong>Integrativni</strong></div>
+          <div class="actions">
+            <a href="o-meni.html" class="link-arrow">Saznajte više o meni i mom pristupu</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA 9 — ZAVRŠNI CTA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="cta-final" aria-label="Dogovorite prvi razgovor">
+    <div class="wrap">
+      <div class="cta-box rv">
+        <span class="label">Učinite prvi korak</span>
+        <div class="rule center" style="margin-top:14px;"></div>
+        <h2>Kad ste spremni — tu sam.</h2>
+        <p>Ako osjećate da vam je potreban prostor za razgovor, podrška u teškoj situaciji ili jednostavno netko tko će vas saslušati bez osuđivanja - psihološko savjetovanje u Velikoj Gorici može biti prvi korak.</p>
+        <div class="cta-btns">
+          <a href="kontakt.html" class="btn btn-dark">Dogovorite prvi razgovor</a>
+          <a href="individualna-psihoterapija.html" class="btn btn-ghost">Individualna psihoterapija</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-logo">
+          Ana Leder
+          <small>Balans · Psihoterapija i savjetovanje</small>
+        </div>
+        <p>Siguran prostor za razgovor, razumijevanje i unutarnju ravnotežu — u Velikoj Gorici i online.</p>
+      </div>
+      <div class="ft-col">
+        <h5>Usluge</h5>
+        <ul>
+          <li><a href="individualna-psihoterapija.html">Individualna psihoterapija</a></li>
+          <li><a href="partnerska-psihoterapija.html">Partnerska psihoterapija</a></li>
+          <li><a href="psiholosko-savjetovanje.html">Psihološko savjetovanje</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Informacije</h5>
+        <ul>
+          <li><a href="o-meni.html">O meni</a></li>
+          <li><a href="proces-pitanja.html">Kako terapija izgleda</a></li>
+          <li><a href="proces-pitanja.html#faq">Najčešća pitanja</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 Ana Leder · Balans. Sva prava pridržana.</span>
+      <span>Psihoterapija i savjetovanje Velika Gorica</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+  const burger   = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+
+  burger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+
+  navLinks.querySelectorAll('.dropdown a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', scrollY > 30);
+  }, { passive: true });
+
+  const revealEls = document.querySelectorAll('.rv');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

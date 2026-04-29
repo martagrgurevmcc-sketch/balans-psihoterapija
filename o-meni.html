@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Ana Leder — Psihoterapeutkinja | Balans psihoterapija Velika Gorica</title>
+  <meta name="description" content="Upoznajte Anu Leder, psihoterapeutkinju i savjetovateljicu u Velikoj Gorici. Logoterapija, integrativni pristup i siguran prostor za vaš osobni rast." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://psihoterapija-balans.hr/o-meni.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ana Leder — Psihoterapeutkinja | Balans Velika Gorica" />
+  <meta property="og:description" content="Logoterapija, integrativni pristup i siguran prostor za vaš osobni rast u Velikoj Gorici." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://psihoterapija-balans.hr/o-meni.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+
+    /* ══════════════════════════════════════
+       HERO — O meni
+    ══════════════════════════════════════ */
+    #hero-about {
+      padding-top: var(--nav-h);
+      background: var(--canvas);
+      position: relative; overflow: hidden;
+    }
+    #hero-about::after {
+      content: '';
+      position: absolute; top: 0; right: 0;
+      width: 45%; height: 100%;
+      background: var(--cream);
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+      pointer-events: none;
+    }
+    .hero-about-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(44px, 7vw, 100px);
+      padding: clamp(60px, 9vw, 110px) 0;
+    }
+
+    .hero-about-text { }
+    .hero-about-text .label   { margin-bottom: 18px; }
+    .hero-about-text h1       { margin-bottom: 8px; }
+    .hero-about-text .h1-sub  {
+      font-family: 'Nunito', sans-serif; font-size: .68rem; font-weight: 400;
+      letter-spacing: .24em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 36px; display: block;
+    }
+    .hero-about-text .lead {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(.98rem, 1.6vw, 1.22rem);
+      color: var(--tan); line-height: 1.65; max-width: 44ch;
+      margin-bottom: 32px;
+    }
+
+    .hero-about-img {
+      position: relative;
+    }
+    .hero-about-img img {
+      width: 100%; height: clamp(300px, 42vw, 520px);
+      object-fit: cover; object-position: center top;
+      border-radius: 4px 52px 4px 52px;
+      filter: saturate(.78);
+      display: block;
+    }
+    .hero-about-img::after {
+      content: ''; position: absolute; bottom: -16px; right: -16px;
+      width: 48%; height: 48%;
+      border-bottom: 1px solid var(--clay-l); border-right: 1px solid var(--clay-l);
+    }
+
+    @media (max-width: 860px) {
+      #hero-about::after { display: none; }
+      .hero-about-inner { grid-template-columns: 1fr; padding: 48px 0 40px; gap: 36px; }
+      .hero-about-img img { height: clamp(260px, 65vw, 420px); }
+      .hero-about-img::after { display: none; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA — OSOBNI UVOD
+    ══════════════════════════════════════ */
+    #intro { background: var(--canvas); }
+
+    .intro-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: start;
+    }
+    .intro-text h2 { margin-bottom: 22px; }
+    .intro-text p + p { margin-top: 16px; }
+    .intro-highlight {
+      margin-top: 32px; padding: 24px 28px;
+      background: var(--cream);
+      border-left: 3px solid var(--moss);
+      border-radius: 0 8px 8px 0;
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(.95rem, 1.4vw, 1.08rem);
+      color: var(--dark); line-height: 1.65;
+    }
+
+    /* Pull quote desno */
+    .intro-quote-col { padding-top: 12px; }
+    .big-quote {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(1.3rem, 2.4vw, 2rem);
+      color: var(--clay); line-height: 1.4;
+      position: relative; padding-left: 24px;
+    }
+    .big-quote::before {
+      content: '"';
+      position: absolute; left: 0; top: -8px;
+      font-size: 3rem; color: var(--clay-l);
+      line-height: 1; font-style: normal;
+    }
+    .big-quote-attr {
+      margin-top: 20px;
+      font-family: 'Nunito', sans-serif; font-size: .68rem; font-weight: 400;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--muted);
+    }
+
+    .intro-img {
+      margin-top: 48px;
+    }
+    .intro-img img {
+      width: 100%; height: clamp(200px, 24vw, 280px);
+      object-fit: cover;
+      border-radius: 4px 36px 4px 36px;
+      filter: saturate(.65);
+    }
+
+    @media (max-width: 860px) {
+      .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA — STIL RADA
+    ══════════════════════════════════════ */
+    #approach { background: var(--cream); }
+
+    .approach-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: center;
+    }
+    .approach-text h2 { margin-bottom: 22px; }
+    .approach-text p + p { margin-top: 16px; }
+
+    /* Metode tags */
+    .method-tags {
+      margin-top: 28px; padding-top: 24px;
+      border-top: 1px solid var(--clay-l);
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .method-tag {
+      font-family: 'Nunito', sans-serif; font-size: .66rem; font-weight: 400;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--moss); background: var(--canvas);
+      border: 1px solid var(--clay-l);
+      padding: 8px 18px; border-radius: 100px;
+    }
+
+    .approach-img img {
+      width: 100%; height: clamp(300px, 40vw, 480px);
+      object-fit: cover;
+      border-radius: 52px 4px 52px 4px;
+      filter: saturate(.7);
+    }
+
+    @media (max-width: 860px) {
+      .approach-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA — ODNOS TERAPEUTA I KLIJENTA
+    ══════════════════════════════════════ */
+    #relationship { background: var(--canvas); }
+
+    .rel-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: center;
+    }
+    .rel-text h2 { margin-bottom: 22px; }
+    .rel-text p + p { margin-top: 16px; }
+
+    .rel-two-cols {
+      margin-top: 32px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .rel-box {
+      padding: 22px 24px;
+      border: 1px solid var(--clay-l);
+      border-radius: 8px;
+      background: var(--cream);
+    }
+    .rel-box-title {
+      font-family: 'Nunito', sans-serif; font-size: .65rem; font-weight: 400;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 10px; display: block;
+    }
+    .rel-box p { font-size: .84rem; margin: 0; }
+
+    .rel-img img {
+      width: 100%; height: clamp(280px, 38vw, 440px);
+      object-fit: cover;
+      border-radius: 4px 52px 4px 52px;
+      filter: saturate(.68);
+    }
+
+    @media (max-width: 860px) {
+      .rel-grid { grid-template-columns: 1fr; gap: 36px; }
+      .rel-two-cols { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA — BALANS (filozofija)
+    ══════════════════════════════════════ */
+    #balans-section { background: var(--cream); }
+
+    .balans-hero-text {
+      max-width: 680px; margin: 0 auto; text-align: center;
+      margin-bottom: 60px;
+    }
+    .balans-hero-text h2 { margin-bottom: 22px; }
+    .balans-hero-text p + p { margin-top: 16px; }
+
+    /* Grid s listom i slikom */
+    .balans-body {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: start;
+    }
+    .balans-quote {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(.98rem, 1.5vw, 1.15rem);
+      color: var(--moss); line-height: 1.65;
+      padding: 28px 0;
+      border-top: 1px solid var(--clay-l);
+      border-bottom: 1px solid var(--clay-l);
+      margin-bottom: 36px;
+    }
+
+    .balans-img img {
+      width: 100%; height: clamp(200px, 26vw, 300px);
+      object-fit: cover;
+      border-radius: 4px 36px 4px 36px;
+      filter: saturate(.65);
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 860px) {
+      .balans-body { grid-template-columns: 1fr; gap: 36px; }
+      .balans-hero-text { text-align: left; }
+    }
+
+    /* Balans items — lijepo dizajnirani redovi umjesto bulleta */
+    .balans-items { display: flex; flex-direction: column; }
+    .balans-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--clay-l);
+      display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start;
+    }
+    .balans-item:first-child { border-top: 1px solid var(--clay-l); }
+    .balans-item-num {
+      font-family: 'Playfair Display', serif; font-size: .78rem;
+      color: var(--clay); font-style: italic; padding-top: 2px;
+    }
+    .balans-item-text {
+      font-size: .88rem; color: var(--muted); font-weight: 300; line-height: 1.7;
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA — EDUKACIJA
+    ══════════════════════════════════════ */
+    #education { background: var(--canvas); }
+
+    .edu-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: start;
+    }
+    .edu-text h2 { margin-bottom: 32px; }
+
+    .edu-list { list-style: none; }
+    .edu-item {
+      display: grid; grid-template-columns: 28px 1fr; gap: 16px;
+      align-items: start; padding: 18px 0;
+      border-bottom: 1px solid var(--clay-l);
+    }
+    .edu-item:first-child { border-top: 1px solid var(--clay-l); }
+    .edu-num {
+      font-family: 'Playfair Display', serif; font-size: 1rem;
+      color: var(--clay); line-height: 1.2; padding-top: 2px;
+    }
+    .edu-item-text { }
+    .edu-item-title {
+      font-family: 'Nunito', sans-serif; font-size: .76rem; font-weight: 400;
+      letter-spacing: .08em; color: var(--dark); line-height: 1.5;
+      display: block; margin-bottom: 2px;
+    }
+    .edu-item-sub {
+      font-size: .78rem; color: var(--muted); font-weight: 300;
+    }
+
+    /* Desno — membership badge + slika, poravnato sa sredinom lijevog stupca */
+    .edu-right { padding-top: clamp(52px, 7vw, 80px); }
+    .membership-badge {
+      padding: 24px 28px;
+      background: var(--cream);
+      border: 1px solid var(--clay-l);
+      border-radius: 8px;
+      display: flex; align-items: flex-start; gap: 18px;
+      margin-bottom: 32px;
+    }
+    .badge-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--moss); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--cream);
+    }
+    .badge-text { }
+    .badge-text strong {
+      font-family: 'Nunito', sans-serif; font-size: .72rem; font-weight: 400;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--dark);
+      display: block; margin-bottom: 4px;
+    }
+    .badge-text p { font-size: .83rem; margin: 0; }
+
+    .edu-img img {
+      width: 100%; height: clamp(180px, 22vw, 240px);
+      object-fit: cover;
+      border-radius: 4px 36px 4px 36px;
+      filter: saturate(.65);
+    }
+
+    @media (max-width: 860px) {
+      .edu-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ══════════════════════════════════════
+       SEKCIJA — OSOBNO
+    ══════════════════════════════════════ */
+    #personal { background: var(--cream); }
+
+    .personal-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: center;
+    }
+    .personal-text h2 { margin-bottom: 22px; }
+    .personal-text p + p { margin-top: 16px; }
+
+    .personal-facts {
+      margin-top: 28px;
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .fact-tag {
+      font-family: 'Nunito', sans-serif; font-size: .7rem; font-weight: 300;
+      color: var(--muted); background: var(--canvas);
+      border: 1px solid var(--clay-l);
+      padding: 8px 16px; border-radius: 100px;
+    }
+
+    .personal-img img {
+      width: 100%; height: clamp(300px, 40vw, 460px);
+      object-fit: cover;
+      border-radius: 4px 52px 4px 52px;
+      filter: saturate(.72);
+    }
+
+    @media (max-width: 860px) {
+      .personal-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    /* ══════════════════════════════════════
+       ZAVRŠNI CTA
+    ══════════════════════════════════════ */
+    #cta-final {
+      padding: clamp(80px, 10vw, 140px) 0;
+      background: var(--canvas); position: relative; overflow: hidden;
+    }
+    #cta-final::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('slike/cta-bg.jpg') center/cover no-repeat;
+      opacity: .06; filter: saturate(.2);
+    }
+    .cta-box {
+      position: relative; z-index: 1;
+      max-width: 600px; margin: 0 auto; text-align: center;
+    }
+    .cta-box h2 { margin-bottom: 20px; }
+    .cta-box p  { max-width: 52ch; margin: 0 auto; }
+    .cta-btns {
+      margin-top: 40px;
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<nav id="site-nav">
+  <div class="wrap nav-i">
+    <a href="index.html" class="nav-logo" aria-label="Balans Ana Leder — povratak na naslovnicu">
+      <img src="slike/PsihoterapijaBalanslogo.svg" alt="Balans — Ana Leder, psihoterapija i savjetovanje" width="52" height="52" />
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Otvori izbornik" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html">Naslovna</a></li>
+      <li class="has-dropdown">
+        <a href="#" aria-haspopup="true">Usluge</a>
+        <ul class="dropdown" role="list">
+          <li><a href="individualna-psihoterapija.html">Individualna psihoterapija</a></li>
+          <li><a href="partnerska-psihoterapija.html">Partnerska psihoterapija</a></li>
+          <li><a href="psiholosko-savjetovanje.html">Psihološko savjetovanje</a></li>
+        </ul>
+      </li>
+      <li><a href="o-meni.html">O meni</a></li>
+      <li><a href="proces-pitanja.html">Proces</a></li>
+      <li><a href="kontakt.html" class="ncta">Dogovorite razgovor</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /HEADER -->
+
+
+<main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO — O MENI
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero-about" aria-label="Ana Leder, psihoterapeutkinja">
+    <div class="wrap">
+      <div class="hero-about-inner">
+
+        <div class="hero-about-text rv">
+          <span class="label">O meni</span>
+          <h1>Ana Leder</h1>
+          <span class="h1-sub">Balans psihoterapija · Velika Gorica</span>
+
+          <p class="lead">Privilegija je biti uz nekoga dok pronalazi vlastiti put i snagu za kvalitetniji život.</p>
+
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="kontakt.html" class="btn btn-dark">Dogovorite razgovor</a>
+            <a href="#intro" class="btn btn-ghost">Saznajte više</a>
+          </div>
+        </div>
+
+        <div class="hero-about-img rv">
+          <!--
+            OVDJE IDE ANINA FOTOGRAFIJA — obavezno!
+            <img src="slike/ana-leder-portret.jpg" alt="Ana Leder, psihoterapeutkinja u Velikoj Gorici" width="700" height="680" loading="eager" />
+          -->
+          <img
+            src="slike/PsihoterapijaBalansAnaLeder.jpg"
+            alt="Ana Leder, psihoterapeutkinja u Velikoj Gorici"
+            width="700" height="680" loading="eager"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA — OSOBNI UVOD
+  ══════════════════════════════════════════════════════════ -->
+  <section id="intro" class="section" aria-label="Tko sam i zašto radim ono što radim">
+    <div class="wrap">
+      <div class="intro-grid">
+
+        <div class="intro-text rv">
+          <span class="label">Osobni uvod</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Tko sam i zašto radim ono što radim?</h2>
+          <p>Ljudi i njihove priče oduvijek su me fascinirali, ono što se događa ispod površine, razlozi naših unutarnjih teškoća i načini na koje možemo živjeti svjesnije i lakše.</p>
+          <p>Duboko vjerujem da svaka osoba, čak i u najtežim razdobljima, u sebi nosi resurse za rast i promjenu. Savjetovanje i psihoterapiju doživljavam kao pažljivo vođen proces u kojem, uz stručnu podršku i siguran odnos, postaje moguće ponovno pronaći unutarnju ravnotežu.</p>
+          <p>Za mene je terapija prije svega odnos, odnos u kojem možete biti viđeni, shvaćeni i prihvaćeni, bez osuđivanja i bez pritiska.</p>
+          <div class="intro-highlight">
+            Posebno me ispunjava kada osoba postupno počne osjećati više hrabrosti za promjenu, kada osvijesti i pronađe riječi za ono što je dugo bilo neizgovoreno i kada ponovno uspostavi autentičnu povezanost sa sobom i drugima.
+          </div>
+        </div>
+
+        <div class="intro-quote-col rv">
+          <p class="big-quote">Terapija je prostor u kojem možete biti viđeni, shvaćeni i prihvaćeni.</p>
+          <p class="big-quote-attr">— Ana Leder</p>
+          <div class="intro-img">
+            <!--
+              PLACEHOLDER:
+              <img src="slike/o-meni-uvod.jpg" alt="Topao i siguran terapijski prostor" width="600" height="240" loading="lazy" />
+            -->
+            <img
+              src="slike/cvijece.jpg"
+              alt="Topao, siguran terapijski prostor"
+              width="600" height="240" loading="lazy"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA — STIL RADA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="approach" class="section" aria-label="Moj pristup psihoterapiji">
+    <div class="wrap">
+      <div class="approach-grid">
+
+        <div class="approach-img rv">
+          <!--
+            PLACEHOLDER:
+            <img src="slike/o-meni-pristup.jpg" alt="Pristup terapiji — topao i profesionalan" width="600" height="480" loading="lazy" />
+          -->
+          <img
+            src="slike/AnaLederBalans.jpg"
+            alt="Pažljiv i profesionalan pristup terapiji"
+            width="600" height="480" loading="lazy"
+          />
+        </div>
+
+        <div class="approach-text rv">
+          <span class="label">Pristup</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Kako radim? - moj pristup psihoterapiji</h2>
+          <p>Moj stil rada je topao i podržavajući, ali istovremeno jasan i profesionalno strukturiran. Ne vjerujem u pristup „jedan za sve". Svaka osoba dolazi sa svojom pričom, iskustvima i vrijednostima - i terapijski proces gradimo zajedno, u skladu s vašim potrebama.</p>
+          <p>Po osnovnoj edukaciji sam logoterapeut, a u svom radu povezujem humanističku perspektivu, egzistencijalno razumijevanje smisla te kognitivno-bihevioralne alate posebno korisne u stanjima povišene psihičke opterećenosti - anksioznih smetnji, intenzivnog stresa, paničnih epizoda, sindroma sagorijevanja (burnouta), poremećaja spavanja, ruminativnih obrazaca mišljenja i teškoća u emocionalnoj regulaciji.</p>
+          <p>Na terapeutu je da pristup prilagodi osobi, a ne obrnuto. U terapiji nema forsiranja. Svaka tema ima svoje vrijeme, a svatko ima svoj tempo. Vjerujem da se promjena ne događa pritiskom, već kroz poštivanje klijentovih granica i međusobno povjerenje.</p>
+          <div class="method-tags">
+            <span class="method-tag">Logoterapija</span>
+            <span class="method-tag">Egzistencijalna analiza</span>
+            <span class="method-tag">Kognitivno-bihevioralni alati</span>
+            <span class="method-tag">Transakcijska analiza</span>
+            <span class="method-tag">Humanistički pristup</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA — ODNOS TERAPEUTA I KLIJENTA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="relationship" class="section" aria-label="Zašto je odnos temelj terapijskog rada">
+    <div class="wrap">
+      <div class="rel-grid">
+
+        <div class="rel-text rv">
+          <span class="label">Odnos</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Zašto je odnos temelj terapijskog rada u Balansu?</h2>
+          <p>Jedan od najvažnijih elemenata psihoterapije je odnos između terapeuta i klijenta. Mnogi psihološki problemi nastaju u kontekstu narušenih odnosa. Zato iscjeljenje često započinje upravo kroz iskustvo drugačijeg, sigurnog odnosa.</p>
+          <p>Terapija je prostor povjerenja i odgovornosti s obje strane.</p>
+          <div class="rel-two-cols">
+            <div class="rel-box">
+              <span class="rel-box-title">Moja odgovornost</span>
+              <p>Etičnost, empatija i stručnost, kontinuirano usavršavanje i profesionalna jasnoća.</p>
+            </div>
+            <div class="rel-box">
+              <span class="rel-box-title">Vaša uloga</span>
+              <p>Aktivna primjena uvida u svakodnevnom životu jer prava promjena se događa izvan terapijske sobe.</p>
+            </div>
+          </div>
+          <p style="margin-top:24px;">Važno je aktivno sudjelovati u psihoterapeutskom procesu, jer se sazrijevanje ne događa spontano, već aktivnim i odgovornim traženjem.</p>
+        </div>
+
+        <div class="rel-img rv">
+          <!--
+            PLACEHOLDER:
+            <img src="slike/o-meni-odnos.jpg" alt="Siguran terapijski odnos" width="600" height="440" loading="lazy" />
+          -->
+          <img
+            src="slike/psihoterapijavelikagoricafotelja.jpeg"
+            alt="Siguran, povjerljiv terapijski odnos"
+            width="600" height="440" loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA — ŠTO ZNAČI BALANS (za mene)
+  ══════════════════════════════════════════════════════════ -->
+  <section id="balans-section" class="section" aria-label="Što za mene znači Balans">
+    <div class="wrap">
+
+      <div class="balans-hero-text rv">
+        <span class="label">Filozofija</span>
+        <div class="rule center" style="margin-top:14px;"></div>
+        <h2>Što za mene znači „Balans"?</h2>
+        <p>Balans znači ravnotežu, i ne znači savršen život bez problema. Balans je sposobnost vraćanja sebi i svojim resursima. Ne znači da nikad nećete izgubiti ravnotežu, nego da joj se znate vratiti.</p>
+        <p>Anksioznost se može pojaviti, ali ne mora upravljati vašim ponašanjem. Konflikt se može dogoditi, ali ne mora srušiti vaš osjećaj vrijednosti. Balans znači fleksibilnost: da vas život može poljuljati, ali da ne izgubite sebe, svoje vrijednosti ili životni smisao.</p>
+      </div>
+
+      <div class="balans-body">
+        <div class="rv">
+          <div class="balans-quote">
+            „Balans je sposobnost vraćanja sebi i svojim resursima, iznova i iznova, koliko god puta je potrebno."
+          </div>
+          <!--
+            PLACEHOLDER:
+            <img class... src="slike/balans-filozofija.jpg" ... />
+          -->
+          <img
+            src="slike/Psihoterapijabalansnature.jpeg"
+            alt="Unutarnja ravnoteža i stabilnost"
+            width="600" height="240" loading="lazy"
+            style="width:100%; height:clamp(180px,22vw,240px); object-fit:cover; border-radius:4px 36px 4px 36px; filter:saturate(.65);"
+          />
+        </div>
+
+        <div class="rv">
+          <div class="balans-items">
+            <div class="balans-item">
+              <span class="balans-item-num">01</span>
+              <span class="balans-item-text">Unutarnja sigurnost i kada je oko vas nesigurno</span>
+            </div>
+            <div class="balans-item">
+              <span class="balans-item-num">02</span>
+              <span class="balans-item-text">Sposobnost samoregulacije emocija</span>
+            </div>
+            <div class="balans-item">
+              <span class="balans-item-num">03</span>
+              <span class="balans-item-text">Prepoznavanje i mijenjanje krivih uvjerenja</span>
+            </div>
+            <div class="balans-item">
+              <span class="balans-item-num">04</span>
+              <span class="balans-item-text">Postavljanje zdravih granica</span>
+            </div>
+            <div class="balans-item">
+              <span class="balans-item-num">05</span>
+              <span class="balans-item-text">Kvalitetniji odnosi s drugima</span>
+            </div>
+            <div class="balans-item">
+              <span class="balans-item-num">06</span>
+              <span class="balans-item-text">Prepoznavanje kada vam treba odmor ili briga prema sebi</span>
+            </div>
+            <div class="balans-item">
+              <span class="balans-item-num">07</span>
+              <span class="balans-item-text">Ravnoteža između potrebe za bliskošću i autonomijom</span>
+            </div>
+            <div class="balans-item">
+              <span class="balans-item-num">08</span>
+              <span class="balans-item-text">Ostati u odnosu, a ne izgubiti sebe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA — EDUKACIJA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="education" class="section" aria-label="Edukacija i stručnost — Ana Leder">
+    <div class="wrap">
+      <div class="edu-grid">
+
+        <div class="edu-text rv">
+          <span class="label">Edukacija</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Edukacija i stručnost</h2>
+
+          <ul class="edu-list">
+            <li class="edu-item">
+              <span class="edu-num">01</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Magistra društveno-humanističkih znanosti</span>
+                <span class="edu-item-sub">Visokoškolska edukacija</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">02</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Četverogodišnja edukacija iz logoterapije i egzistencijalne analize</span>
+                <span class="edu-item-sub">HCLEA</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">03</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Edukacija iz propedeutike psihoterapije</span>
+                <span class="edu-item-sub">Algebra - Bernays veleučilište</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">04</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Edukacija iz transakcijske analize (TA)</span>
+                <span class="edu-item-sub">Dodatno stručno usavršavanje</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">05</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Otvorena edukacija iz dječje i adolescentske Gestalt terapije</span>
+                <span class="edu-item-sub">IGW</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">06</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Brojni seminari i stručna usavršavanja</span>
+                <span class="edu-item-sub">Kontinuirano višegodišnje usavršavanje</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="edu-right rv">
+          <div class="membership-badge">
+            <div class="badge-icon">A</div>
+            <div class="badge-text">
+              <strong>Hrvatska komora psihoterapeuta</strong>
+              <p>Ana Leder je aktivna članica Hrvatske komore psihoterapeuta - tijela koje osigurava etičke standarde i stručnu razinu psihoterapeutskog rada u Hrvatskoj.</p>
+            </div>
+          </div>
+          <!--
+            PLACEHOLDER:
+            <img src="slike/edukacija.jpg" alt="Stručna edukacija i usavršavanje" width="600" height="220" loading="lazy" />
+          -->
+          <div class="edu-img">
+            <img
+              src="slike/AnaLederBalans.jpg"
+              alt="Stručnost i kontinuirano usavršavanje"
+              width="600" height="220" loading="lazy"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA — NEŠTO OSOBNO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="personal" class="section" aria-label="Nešto osobno o Ani Leder">
+    <div class="wrap">
+      <div class="personal-grid">
+
+        <div class="personal-text rv">
+          <span class="label">I nešto osobno</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Izvan terapijske sobe</h2>
+          <p>U dugogodišnjem sam braku i majka sam dvojici sinova. Velika ljubiteljica životinja.</p>
+          <p>U slobodno vrijeme volontiram i čitam, obožavam putovati, a opuštam se uz kavice i druženja s bliskim ljudima.</p>
+          <p>Vjerujem da autentičan život, onaj koji živimo u skladu sa sobom i svojim vrijednostima počinje malim, svjesnim koracima. I to, na kraju, i jest srž onoga što radim.</p>
+          <div class="personal-facts">
+            <span class="fact-tag">Majka dvojice sinova</span>
+            <span class="fact-tag">Ljubiteljica životinja</span>
+            <span class="fact-tag">Volonterka</span>
+            <span class="fact-tag">Strastvena čitačica</span>
+            <span class="fact-tag">Putnica</span>
+          </div>
+        </div>
+
+        <div class="rv">
+          <!--
+            PLACEHOLDER — opuštena, osobna fotografija Ane:
+            <img src="slike/ana-osobno.jpg" alt="Ana Leder — izvan terapijske sobe" width="600" height="460" loading="lazy" />
+          -->
+          <img
+            src="slike/AnaLeder.jpg"
+            alt="Ana Leder — izvan terapijske sobe"
+            width="600" height="460" loading="lazy"
+            style="width:100%; height:clamp(300px,40vw,460px); object-fit:cover; object-position:center top; border-radius:52px 4px 52px 4px; filter:saturate(.72);"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       ZAVRŠNI CTA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="cta-final" aria-label="Dogovorite prvi razgovor s Anom Leder">
+    <div class="wrap">
+      <div class="cta-box rv">
+        <span class="label">Sljedeći korak</span>
+        <div class="rule center" style="margin-top:14px;"></div>
+        <h2>Kad ste spremni, tu sam.</h2>
+        <p>Ako osjećate da vam je potrebna podrška ili jednostavno želite saznati više, slobodno se javite. Nema obveze i pritiska. Prvi korak je uvijek samo razgovor.</p>
+        <div class="cta-btns">
+          <a href="kontakt.html" class="btn btn-dark">Dogovorite prvi razgovor</a>
+          <a href="individualna-psihoterapija.html" class="btn btn-ghost">Pogledajte usluge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-logo">
+          Ana Leder
+          <small>Balans · Psihoterapija i savjetovanje</small>
+        </div>
+        <p>Siguran prostor za razgovor, razumijevanje i unutarnju ravnotežu — u Velikoj Gorici i online.</p>
+      </div>
+      <div class="ft-col">
+        <h5>Usluge</h5>
+        <ul>
+          <li><a href="individualna-psihoterapija.html">Individualna psihoterapija</a></li>
+          <li><a href="partnerska-psihoterapija.html">Partnerska psihoterapija</a></li>
+          <li><a href="psiholosko-savjetovanje.html">Psihološko savjetovanje</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Informacije</h5>
+        <ul>
+          <li><a href="o-meni.html">O meni</a></li>
+          <li><a href="proces-pitanja.html">Kako terapija izgleda</a></li>
+          <li><a href="proces-pitanja.html#faq">Najčešća pitanja</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 Ana Leder · Balans. Sva prava pridržana.</span>
+      <span>Psihoterapija i savjetovanje Velika Gorica</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+  const burger   = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+
+  burger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+
+  navLinks.querySelectorAll('.dropdown a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', scrollY > 30);
+  }, { passive: true });
+
+  const revealEls = document.querySelectorAll('.rv');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

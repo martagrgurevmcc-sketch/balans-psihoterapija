@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Kontakt | Psihoterapija Velika Gorica — Balans Ana Leder</title>
+  <meta name="description" content="Zakažite prvi susret na psihoterapiji u Velikoj Gorici. Ispunite kontakt formu, javite se mailom ili telefonom. Ana Leder, Balans. Uživo i online." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://psihoterapija-balans.hr/kontakt.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kontakt | Psihoterapija Velika Gorica — Balans Ana Leder" />
+  <meta property="og:description" content="Zakažite prvi susret. Nema obveze i pritiska. Prvi korak je uvijek samo razgovor." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://psihoterapija-balans.hr/kontakt.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+
+    /* ══════════════════════════════════════
+       HERO — Kontakt
+    ══════════════════════════════════════ */
+    #hero-contact {
+      padding-top: var(--nav-h);
+      background: var(--canvas);
+    }
+    .hero-contact-inner {
+      padding: clamp(56px, 8vw, 100px) 0 clamp(48px, 7vw, 80px);
+      max-width: 680px;
+    }
+    .hero-contact-inner .label  { margin-bottom: 18px; }
+    .hero-contact-inner h1      { margin-bottom: 20px; }
+    .hero-contact-inner .lead   {
+      font-size: clamp(.9rem, 1.3vw, 1.02rem);
+      color: var(--muted); max-width: 52ch; line-height: 1.95;
+    }
+
+    /* ══════════════════════════════════════
+       GLAVNI GRID — forma + info
+    ══════════════════════════════════════ */
+    #contact-main {
+      background: var(--cream);
+      padding: clamp(64px, 9vw, 120px) 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: clamp(44px, 7vw, 80px);
+      align-items: start;
+    }
+
+    /* ══════════════════════════════════════
+       FORMA
+    ══════════════════════════════════════ */
+    .contact-form-wrap { }
+    .contact-form-wrap h2 { margin-bottom: 36px; }
+
+    .form-group { margin-bottom: 24px; }
+    .form-label {
+      display: block;
+      font-family: 'Nunito', sans-serif; font-size: .67rem; font-weight: 400;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .form-label .req { color: var(--moss); margin-left: 2px; }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      font-family: 'Nunito', sans-serif; font-size: .9rem; font-weight: 300;
+      color: var(--dark); background: var(--canvas);
+      border: 1px solid var(--clay-l); border-radius: 6px;
+      padding: 14px 18px;
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--moss);
+      box-shadow: 0 0 0 3px rgba(110,136,120,.1);
+    }
+    .form-input.error,
+    .form-select.error,
+    .form-textarea.error {
+      border-color: #c97b6a;
+    }
+
+    .form-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a7e75' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px; cursor: pointer;
+    }
+
+    .form-textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+
+    /* Inline error poruka */
+    .form-error {
+      display: none;
+      font-family: 'Nunito', sans-serif; font-size: .72rem; font-weight: 300;
+      color: #c97b6a; margin-top: 6px;
+    }
+    .form-group.has-error .form-error { display: block; }
+
+    /* Dva polja u redu */
+    .form-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+      margin-bottom: 24px;
+    }
+    .form-row .form-group { margin-bottom: 0; }
+
+    /* Optional label */
+    .form-optional {
+      font-family: 'Nunito', sans-serif; font-size: .64rem; font-weight: 300;
+      color: var(--clay); letter-spacing: .1em; margin-left: 6px;
+    }
+
+    /* Submit button + status */
+    .form-footer {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .btn-submit {
+      background: var(--tan); color: var(--dark);
+      font-family: 'Nunito', sans-serif; font-size: .73rem; font-weight: 400;
+      letter-spacing: .16em; text-transform: uppercase;
+      padding: 15px 40px; border-radius: 100px;
+      border: none; cursor: pointer;
+      transition: background .26s, color .26s, transform .2s, box-shadow .26s;
+    }
+    .btn-submit:hover {
+      background: var(--moss); color: var(--cream);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(110,136,120,.25);
+    }
+    .btn-submit:disabled {
+      opacity: .6; cursor: not-allowed; transform: none; box-shadow: none;
+    }
+
+    .form-status {
+      font-family: 'Nunito', sans-serif; font-size: .8rem; font-weight: 300;
+      color: var(--muted); display: none;
+    }
+    .form-status.visible { display: block; }
+    .form-status.success { color: var(--moss); }
+    .form-status.error-msg { color: #c97b6a; }
+
+    /* Success state — cijela forma */
+    .form-success-box {
+      display: none;
+      padding: 40px;
+      background: var(--canvas); border: 1px solid var(--clay-l);
+      border-radius: 12px; text-align: center;
+    }
+    .form-success-box.visible { display: block; }
+    .success-icon {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--moss);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .success-icon svg { width: 24px; height: 24px; }
+    .form-success-box h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.4rem;
+      color: var(--dark); margin-bottom: 12px;
+    }
+    .form-success-box p { max-width: 40ch; margin: 0 auto; }
+
+    /* ══════════════════════════════════════
+       DESNA KOLUMNA — Info
+    ══════════════════════════════════════ */
+    .contact-info { }
+
+    .info-block {
+      padding: 28px 32px;
+      background: var(--canvas);
+      border: 1px solid var(--clay-l);
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    .info-block:last-child { margin-bottom: 0; }
+
+    .info-block h2 {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      margin-bottom: 18px;
+    }
+
+    /* Direktni kontakt */
+    .direct-links { list-style: none; }
+    .direct-links li {
+      display: flex; align-items: center; gap: 14px;
+      padding: 12px 0; border-bottom: 1px solid var(--clay-l);
+    }
+    .direct-links li:first-child { border-top: 1px solid var(--clay-l); }
+    .direct-icon {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--cream); border: 1px solid var(--clay-l);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: .9rem;
+    }
+    .direct-links a {
+      font-family: 'Nunito', sans-serif; font-size: .84rem; font-weight: 300;
+      color: var(--dark); transition: color .2s;
+    }
+    .direct-links a:hover { color: var(--moss); }
+
+    /* Adresa */
+    .address-block { }
+    .address-line {
+      font-family: 'Nunito', sans-serif; font-size: .84rem; font-weight: 300;
+      color: var(--muted); line-height: 1.8;
+    }
+    .address-line strong { color: var(--dark); font-weight: 400; }
+
+    /* Karta iframe */
+    .map-wrap {
+      margin-top: 16px; border-radius: 8px; overflow: hidden;
+      border: 1px solid var(--clay-l);
+    }
+    .map-wrap iframe {
+      width: 100%; height: 220px;
+      display: block; border: none;
+      filter: saturate(.7) contrast(.92);
+    }
+
+    /* Online info */
+    .online-note {
+      margin-top: 14px;
+      padding: 14px 18px;
+      background: var(--cream);
+      border-left: 3px solid var(--moss);
+      border-radius: 0 6px 6px 0;
+      font-size: .83rem; color: var(--muted); line-height: 1.7;
+    }
+
+    /* Radno vrijeme / info tagovi */
+    .info-tags {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
+    }
+    .info-tag {
+      font-family: 'Nunito', sans-serif; font-size: .66rem; font-weight: 300;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--muted); background: var(--cream);
+      border: 1px solid var(--clay-l);
+      padding: 6px 14px; border-radius: 100px;
+    }
+
+    /* ══════════════════════════════════════
+       ZAVRŠNA REČENICA
+    ══════════════════════════════════════ */
+    #closing {
+      background: var(--canvas);
+      padding: clamp(56px, 8vw, 96px) 0;
+      text-align: center;
+    }
+    .closing-inner { max-width: 520px; margin: 0 auto; }
+    .closing-inner blockquote {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+      color: var(--dark); line-height: 1.45; margin-bottom: 16px;
+    }
+    .closing-inner cite {
+      font-family: 'Nunito', sans-serif; font-size: .66rem; font-weight: 400;
+      letter-spacing: .24em; text-transform: uppercase;
+      color: var(--moss); font-style: normal;
+    }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 960px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-info { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .contact-info .info-block { margin-bottom: 0; }
+    }
+    @media (max-width: 640px) {
+      .contact-info { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<nav id="site-nav">
+  <div class="wrap nav-i">
+    <a href="index.html" class="nav-logo" aria-label="Balans Ana Leder — povratak na naslovnicu">
+      <img src="slike/PsihoterapijaBalanslogo.svg" alt="Balans — Ana Leder, psihoterapija i savjetovanje" width="52" height="52" />
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Otvori izbornik" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html">Naslovna</a></li>
+      <li class="has-dropdown">
+        <a href="#" aria-haspopup="true">Usluge</a>
+        <ul class="dropdown" role="list">
+          <li><a href="individualna-psihoterapija.html">Individualna psihoterapija</a></li>
+          <li><a href="partnerska-psihoterapija.html">Partnerska psihoterapija</a></li>
+          <li><a href="psiholosko-savjetovanje.html">Psihološko savjetovanje</a></li>
+        </ul>
+      </li>
+      <li><a href="o-meni.html">O meni</a></li>
+      <li><a href="proces-pitanja.html">Proces</a></li>
+      <li><a href="kontakt.html" class="ncta">Dogovorite razgovor</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /HEADER -->
+
+
+<main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero-contact" aria-label="Kontakt">
+    <div class="wrap">
+      <div class="hero-contact-inner rv">
+        <span class="label">Kontakt · Dogovorite razgovor</span>
+        <h1>Dogovorite prvi razgovor</h1>
+        <p class="lead">Ako osjećate da vam je potrebna podrška ili jednostavno želite saznati više, slobodno se javite. Nema obveze i pritiska. Prvi korak je uvijek samo razgovor.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FORMA + INFO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="contact-main" aria-label="Kontakt forma i informacije">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <!-- ── FORMA ── -->
+        <div class="contact-form-wrap rv">
+          <h2>Pošaljite upit</h2>
+
+          <!--
+            Netlify Forms integracija:
+            - atribut data-netlify="true" → Netlify automatski prima form
+            - name="kontakt" → ime forme u Netlify dashboardu
+            - netlify-honeypot="bot-field" → spam zaštita
+          -->
+          <form
+            id="contact-form"
+            name="kontakt"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate
+          >
+            <!-- Netlify hidden fields -->
+            <input type="hidden" name="form-name" value="kontakt" />
+            <p style="display:none;">
+              <label>Ne ispunjavajte ovo polje: <input name="bot-field" /></label>
+            </p>
+
+            <!-- Ime + Prezime -->
+            <div class="form-row">
+              <div class="form-group" id="group-ime">
+                <label class="form-label" for="ime">Ime <span class="req">*</span></label>
+                <input
+                  class="form-input" type="text" id="ime" name="ime"
+                  autocomplete="given-name" placeholder="Vaše ime"
+                  required
+                />
+                <span class="form-error">Molimo unesite vaše ime.</span>
+              </div>
+              <div class="form-group" id="group-prezime">
+                <label class="form-label" for="prezime">Prezime <span class="req">*</span></label>
+                <input
+                  class="form-input" type="text" id="prezime" name="prezime"
+                  autocomplete="family-name" placeholder="Vaše prezime"
+                  required
+                />
+                <span class="form-error">Molimo unesite vaše prezime.</span>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group" id="group-email">
+              <label class="form-label" for="email">Email adresa <span class="req">*</span></label>
+              <input
+                class="form-input" type="email" id="email" name="email"
+                autocomplete="email" placeholder="vasa@email.hr"
+                required
+              />
+              <span class="form-error">Molimo unesite ispravnu email adresu.</span>
+            </div>
+
+            <!-- Telefon -->
+            <div class="form-group" id="group-telefon">
+              <label class="form-label" for="telefon">
+                Broj telefona <span class="form-optional">neobavezno</span>
+              </label>
+              <input
+                class="form-input" type="tel" id="telefon" name="telefon"
+                autocomplete="tel" placeholder="09x xxx xxxx"
+              />
+            </div>
+
+            <!-- Vrsta usluge -->
+            <div class="form-group" id="group-usluga">
+              <label class="form-label" for="usluga">Vrsta usluge <span class="req">*</span></label>
+              <select class="form-select" id="usluga" name="usluga" required>
+                <option value="" disabled selected>Odaberite uslugu…</option>
+                <option value="Individualna psihoterapija">Individualna psihoterapija</option>
+                <option value="Partnerska psihoterapija">Partnerska psihoterapija</option>
+                <option value="Psihološko savjetovanje">Psihološko savjetovanje</option>
+                <option value="Nisam siguran/a">Nisam siguran/a</option>
+              </select>
+              <span class="form-error">Molimo odaberite vrstu usluge.</span>
+            </div>
+
+            <!-- Poruka -->
+            <div class="form-group">
+              <label class="form-label" for="poruka">
+                Poruka <span class="form-optional">neobavezno</span>
+              </label>
+              <textarea
+                class="form-textarea" id="poruka" name="poruka"
+                placeholder="Možete napisati što vas dovodi ili ostaviti prazno — nema pritiska."
+              ></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-footer">
+              <button type="submit" class="btn-submit" id="btn-submit">
+                Pošalji upit
+              </button>
+              <span class="form-status" id="form-status"></span>
+            </div>
+
+          </form>
+
+          <!-- Success box — prikazuje se nakon slanja -->
+          <div class="form-success-box" id="success-box" aria-live="polite">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 13l4 4L19 7" stroke="#faf7f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Upit je poslan!</h3>
+            <p>Hvala vam. Javit ću vam se u najkraćem mogućem roku, najčešće unutar jednog radnog dana.</p>
+          </div>
+        </div>
+
+        <!-- ── INFO KOLUMNA ── -->
+        <div class="contact-info rv">
+
+          <!-- Direktni kontakt -->
+          <div class="info-block">
+            <h2>Ili se javite direktno</h2>
+            <ul class="direct-links">
+              <li>
+                <span class="direct-icon">✉</span>
+                <a href="mailto:leder.ana@gmail.com">leder.ana@gmail.com</a>
+              </li>
+              <li>
+                <span class="direct-icon">☎</span>
+                <a href="tel:+385915246237">091 524 6237</a>
+              </li>
+            </ul>
+            <div class="info-tags">
+              <span class="info-tag">Odgovor unutar 1 rad. dana</span>
+              <span class="info-tag">Bez obveze</span>
+            </div>
+          </div>
+
+          <!-- Lokacija + karta -->
+          <div class="info-block">
+            <h2>Gdje se nalazimo — uživo i online</h2>
+            <div class="address-block">
+              <p class="address-line">
+                <strong>Uživo:</strong><br>
+                Zagrebačka ul. 37<br>
+                10410 Velika Gorica
+              </p>
+            </div>
+
+            <!-- Google karta — embed -->
+            <div class="map-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2785.7341898715044!2d16.066228976441675!3d45.716369116577965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47667e667be56d75%3A0xae2f46aa67664f80!2sZagreba%C4%8Dka%20Ul.%2037%2C%2010410%2C%20Velika%20Gorica!5e0!3m2!1shr!2shr!4v1777382937384!5m2!1shr!2shr"
+                width="600" height="220"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Balans psihoterapija — Zagrebačka ul. 37, Velika Gorica"
+              ></iframe>
+            </div>
+
+            <div class="online-note">
+              <strong style="color:var(--dark); font-weight:400;">Online:</strong> Terapija je dostupna i online, bez obzira na lokaciju, u terminu koji vam odgovara.
+            </div>
+          </div>
+
+        </div>
+        <!-- /INFO KOLUMNA -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       ZAVRŠNA REČENICA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="closing" aria-label="Završna poruka">
+    <div class="wrap">
+      <div class="closing-inner rv">
+        <blockquote>„Svaki prvi korak nosi hrabrost.<br>Ovdje ste na pravom mjestu."</blockquote>
+        <cite>— Ana Leder, Balans</cite>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-logo">
+          Ana Leder
+          <small>Balans · Psihoterapija i savjetovanje</small>
+        </div>
+        <p>Siguran prostor za razgovor, razumijevanje i unutarnju ravnotežu — u Velikoj Gorici i online.</p>
+      </div>
+      <div class="ft-col">
+        <h5>Usluge</h5>
+        <ul>
+          <li><a href="individualna-psihoterapija.html">Individualna psihoterapija</a></li>
+          <li><a href="partnerska-psihoterapija.html">Partnerska psihoterapija</a></li>
+          <li><a href="psiholosko-savjetovanje.html">Psihološko savjetovanje</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Informacije</h5>
+        <ul>
+          <li><a href="o-meni.html">O meni</a></li>
+          <li><a href="proces-pitanja.html">Kako terapija izgleda</a></li>
+          <li><a href="proces-pitanja.html#faq">Najčešća pitanja</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 Ana Leder · Balans. Sva prava pridržana.</span>
+      <span>Psihoterapija i savjetovanje Velika Gorica</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+  /* ── Hamburger ── */
+  const burger   = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  burger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('.dropdown a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ── Nav shadow ── */
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', scrollY > 30);
+  }, { passive: true });
+
+  /* ── Scroll reveal ── */
+  const revealEls = document.querySelectorAll('.rv');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => io.observe(el));
+
+  /* ════════════════════════════════════════
+     FORMA — validacija i slanje
+  ════════════════════════════════════════ */
+  const form      = document.getElementById('contact-form');
+  const btnSubmit = document.getElementById('btn-submit');
+  const status    = document.getElementById('form-status');
+  const successBox = document.getElementById('success-box');
+
+  /* Validacija jednog polja */
+  function validateField(input) {
+    const group = input.closest('.form-group');
+    if (!group) return true;
+
+    let valid = true;
+
+    if (input.required) {
+      if (input.tagName === 'SELECT') {
+        valid = input.value !== '';
+      } else {
+        valid = input.value.trim() !== '';
+      }
+    }
+
+    if (valid && input.type === 'email') {
+      valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+    }
+
+    group.classList.toggle('has-error', !valid);
+    input.classList.toggle('error', !valid);
+    return valid;
+  }
+
+  /* Live validacija — briše grešku čim počneš tipkati */
+  form.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
+    input.addEventListener('input', () => {
+      if (input.closest('.form-group').classList.contains('has-error')) {
+        validateField(input);
+      }
+    });
+    input.addEventListener('blur', () => validateField(input));
+  });
+
+  /* Submit */
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    /* Validiraj sva obavezna polja */
+    const fields = form.querySelectorAll('[required]');
+    let allValid = true;
+    fields.forEach(f => {
+      if (!validateField(f)) allValid = false;
+    });
+    if (!allValid) return;
+
+    /* Šalje na Netlify */
+    btnSubmit.disabled = true;
+    status.textContent = 'Šalje se…';
+    status.className = 'form-status visible';
+
+    try {
+      const data = new FormData(form);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
+      });
+
+      if (response.ok) {
+        /* Sakrij formu, prikaži success box */
+        form.style.display = 'none';
+        successBox.classList.add('visible');
+        status.className = 'form-status';
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    } catch (err) {
+      btnSubmit.disabled = false;
+      status.textContent = 'Nešto nije u redu. Molimo javite se direktno na leder.ana@gmail.com';
+      status.className = 'form-status visible error-msg';
+    }
+  });
+</script>
+
+</body>
+</html>

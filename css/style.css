@@ -1,0 +1,521 @@
+/* ============================================================
+   BALANS — Ana Leder | Global Stylesheet
+   Fontovi: Playfair Display (serif) + Nunito (sans)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&display=swap');
+
+/* ─── RESET ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+img  { display: block; max-width: 100%; }
+a    { color: inherit; text-decoration: none; }
+
+/* ─── DESIGN TOKENS ─────────────────────────────────────── */
+:root {
+  --dark:    #3a3630;
+  --moss:    #6e8878;
+  --moss-l:  #8fa68a;
+  --clay:    #d4b8ac;
+  --clay-l:  #e8d5cb;
+  --canvas:  #f2ece4;
+  --cream:   #faf7f2;
+  --tan:     #c9b49a;
+  --muted:   #8a7e75;
+
+  --header-bg: #6e8878;    /* moss — header pozadina */
+  --footer-bg: #3a3630;    /* dark — footer pozadina */
+
+  --nav-h: 80px;           /* visina headera — koristiti za padding-top stranice */
+}
+
+/* ─── BODY ───────────────────────────────────────────────── */
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  color: var(--dark);
+  background: var(--cream);
+  line-height: 1.85;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── TIPOGRAFIJA ────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.18;
+}
+h1 { font-size: clamp(1.9rem, 4vw, 3.2rem);   letter-spacing: -.015em; }
+h2 { font-size: clamp(1.5rem, 2.6vw, 2.3rem); letter-spacing: -.01em; }
+h3 { font-size: clamp(1.05rem, 1.5vw, 1.25rem); }
+h4 { font-size: clamp(.9rem, 1.2vw, 1rem); }
+p  {
+  font-weight: 300;
+  font-size: clamp(.88rem, 1.2vw, .98rem);
+  color: var(--muted);
+  line-height: 1.95;
+}
+
+/* ─── ATOMI ──────────────────────────────────────────────── */
+.label {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: .65rem; font-weight: 400;
+  letter-spacing: .3em; text-transform: uppercase;
+  color: var(--moss);
+}
+.rule { width: 36px; height: 1px; background: var(--clay); margin-bottom: 24px; }
+.rule.center { margin-left: auto; margin-right: auto; }
+
+/* ─── LAYOUT ─────────────────────────────────────────────── */
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 96px); }
+
+/* ─── GUMBI ──────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: .73rem; font-weight: 400;
+  letter-spacing: .16em; text-transform: uppercase;
+  padding: 14px 36px; border-radius: 100px;
+  transition: all .26s ease;
+  cursor: pointer;
+}
+.btn-dark { background: var(--tan); color: var(--dark); }
+.btn-dark:hover {
+  background: var(--moss); color: var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(110,136,120,.25);
+}
+.btn-ghost { border: 1px solid var(--clay); color: var(--dark); background: transparent; }
+.btn-ghost:hover { border-color: var(--moss); color: var(--moss); }
+
+.link-arrow {
+  font-family: 'Nunito', sans-serif;
+  font-size: .72rem; font-weight: 400;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--moss);
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: gap .2s;
+}
+.link-arrow::after { content: '→'; }
+.link-arrow:hover { gap: 16px; }
+
+/* ─── SEKCIJE ────────────────────────────────────────────── */
+.section { padding: clamp(72px, 9vw, 130px) 0; }
+.section.bg-canvas { background: var(--canvas); }
+.section.bg-cream  { background: var(--cream); }
+
+/* ─── REVEAL ANIMACIJA ───────────────────────────────────── */
+.rv {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.rv.on { opacity: 1; transform: none; }
+
+/* ─── TWO-COL GRID ───────────────────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(44px, 7vw, 100px);
+  align-items: center;
+}
+.two-col.flip { direction: rtl; }
+.two-col.flip > * { direction: ltr; }
+
+/* ─── FOTO STILOVI ───────────────────────────────────────── */
+.photo-wrap { position: relative; }
+.photo-main { width: 100%; object-fit: cover; filter: saturate(.72); }
+.photo-r1 { height: clamp(320px, 42vw, 520px); border-radius: 4px 52px 4px 52px; }
+.photo-r2 { height: clamp(340px, 44vw, 540px); border-radius: 52px 4px 52px 4px; }
+.photo-r3 { height: clamp(320px, 42vw, 520px); border-radius: 4px 52px 4px 52px; }
+
+.frame-tl::before {
+  content: ''; position: absolute; top: -16px; left: -16px;
+  width: 48%; height: 48%;
+  border-top: 1px solid var(--clay-l); border-left: 1px solid var(--clay-l);
+  pointer-events: none;
+}
+.frame-br::after {
+  content: ''; position: absolute; bottom: -16px; right: -16px;
+  width: 48%; height: 48%;
+  border-bottom: 1px solid var(--clay-l); border-right: 1px solid var(--clay-l);
+  pointer-events: none;
+}
+.circle-accent::before {
+  content: ''; position: absolute; top: -28px; right: -28px;
+  width: 100px; height: 100px; border-radius: 50%;
+  border: 1px solid var(--clay-l); pointer-events: none;
+}
+
+/* ─── TEXT BLOCK ─────────────────────────────────────────── */
+.text-block .label   { margin-bottom: 16px; }
+.text-block .rule    { margin-top: 14px; }
+.text-block h2       { margin-top: 0; margin-bottom: 24px; }
+.text-block p + p    { margin-top: 16px; }
+.text-block .actions { margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+/* ─── STRIP (citat u traci) ──────────────────────────────── */
+.strip {
+  background: var(--canvas);
+  padding: clamp(44px, 6vw, 72px) 0;
+  border-top: 1px solid rgba(201,180,154,.18);
+  border-bottom: 1px solid rgba(201,180,154,.18);
+}
+.strip-quote { text-align: center; max-width: 680px; margin: 0 auto; padding: 0 24px; }
+.strip-quote blockquote {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.45rem); color: var(--dark);
+  line-height: 1.55; margin-bottom: 16px;
+}
+.strip-quote .sq-mark {
+  font-family: 'Playfair Display', serif; font-size: 2.5rem;
+  color: var(--clay); line-height: 0; vertical-align: -.3em; margin-right: 4px;
+}
+.strip-quote cite {
+  font-family: 'Nunito', sans-serif; font-size: .66rem; font-weight: 400;
+  letter-spacing: .24em; text-transform: uppercase; color: var(--moss); font-style: normal;
+}
+
+/* ─── ABOUT CRED ─────────────────────────────────────────── */
+.about-cred {
+  margin-top: 28px; padding-top: 20px;
+  border-top: 1px solid var(--clay-l);
+  font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--muted); font-weight: 400;
+}
+.about-cred strong { color: var(--moss); font-weight: 400; }
+
+/* ─── STEPS ──────────────────────────────────────────────── */
+.steps { display: flex; flex-direction: column; }
+.step {
+  display: grid; grid-template-columns: 44px 1fr; gap: 18px; align-items: start;
+  padding: 22px 0; border-bottom: 1px solid var(--clay-l);
+}
+.step:first-child { border-top: 1px solid var(--clay-l); }
+.step-n {
+  font-family: 'Playfair Display', serif; font-size: 1.4rem;
+  color: var(--clay); line-height: 1.1; padding-top: 3px;
+}
+.step-b h4 {
+  font-family: 'Nunito', sans-serif; font-size: .76rem; font-weight: 400;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--dark); margin-bottom: 5px;
+}
+.step-b p { font-size: .85rem; margin: 0; }
+
+/* ─── BALANS BADGE — diskretni, pojavljuje se na usluge stranicama ── */
+.balans-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-size: .62rem; font-weight: 400;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--clay-l);
+  padding: 6px 14px; border-radius: 100px;
+  background: var(--cream);
+  margin-bottom: 32px;
+}
+.balans-badge::before {
+  content: '';
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--moss); flex-shrink: 0;
+}
+
+/* ─── CTA BOX ────────────────────────────────────────────── */
+#cta-final {
+  padding: clamp(80px, 10vw, 140px) 0;
+  background: var(--canvas); position: relative; overflow: hidden;
+}
+#cta-final::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1400&q=50') center/cover no-repeat;
+  opacity: .05; filter: saturate(.2);
+}
+.cta-box {
+  position: relative; z-index: 1;
+  max-width: 600px; margin: 0 auto; text-align: center;
+}
+.cta-box .label  { margin-bottom: 18px; }
+.cta-box .rule   { margin: 14px auto 28px; }
+.cta-box h2      { margin-bottom: 20px; }
+.cta-box p       { margin: 0 auto; }
+.cta-box .cta-btns {
+  margin-top: 40px;
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+}
+
+/* ════════════════════════════════════════════════════════════
+   HEADER / NAV
+   ════════════════════════════════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: var(--nav-h);
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(250,247,242,.1);
+  transition: box-shadow .3s;
+}
+nav.scrolled {
+  box-shadow: 0 2px 24px rgba(58,54,48,.18);
+}
+
+.nav-i {
+  height: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex; align-items: center;
+  flex-shrink: 0;
+}
+.nav-logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+  /* Ako PNG nema transparentnu pozadinu, koristimo mix-blend-mode */
+  /* mix-blend-mode: luminosity; */
+}
+
+/* Nav links — desktop */
+.nav-links {
+  display: flex; gap: 28px;
+  list-style: none; align-items: center;
+}
+.nav-links > li { position: relative; }
+
+.nav-links a {
+  font-family: 'Nunito', sans-serif;
+  font-size: .72rem; font-weight: 400;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(250,247,242,.8);
+  transition: color .2s;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+.nav-links > li:hover > a { color: var(--cream); }
+
+/* CTA gumb u navu */
+.nav-links .ncta {
+  background: rgba(250,247,242,.15);
+  color: var(--cream) !important;
+  padding: 10px 22px;
+  border-radius: 100px;
+  border: 1px solid rgba(250,247,242,.3);
+  transition: background .25s, border-color .25s;
+}
+.nav-links .ncta:hover {
+  background: var(--cream);
+  color: var(--moss) !important;
+  border-color: var(--cream);
+}
+
+/* ─── DROPDOWN ───────────────────────────────────────────── */
+.nav-links .has-dropdown > a::after {
+  content: ' ↓';
+  font-size: .6rem;
+  opacity: .7;
+  transition: transform .2s;
+  display: inline-block;
+}
+.nav-links .has-dropdown:hover > a::after {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  display: none;
+  position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%);
+  background: var(--cream);
+  border: 1px solid var(--clay-l);
+  border-radius: 8px;
+  min-width: 230px;
+  box-shadow: 0 12px 40px rgba(58,54,48,.1);
+  padding: 20px 0 8px; /* padding-top kao bridge da miš može prijeći */
+  list-style: none;
+  z-index: 300;
+}
+.dropdown::before {
+  content: '';
+  position: absolute; top: 8px; left: 50%;
+  width: 10px; height: 10px;
+  background: var(--cream);
+  border-top: 1px solid var(--clay-l);
+  border-left: 1px solid var(--clay-l);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.has-dropdown:hover .dropdown { display: block; }
+
+.dropdown li a {
+  display: block;
+  padding: 11px 22px;
+  font-family: 'Nunito', sans-serif;
+  font-size: .72rem; font-weight: 400;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted) !important;
+  transition: background .18s, color .18s;
+  white-space: nowrap;
+}
+.dropdown li a:hover {
+  background: var(--canvas);
+  color: var(--dark) !important;
+}
+.dropdown li + li { border-top: 1px solid rgba(201,180,154,.2); }
+
+/* ─── HAMBURGER / MOBILE ─────────────────────────────────── */
+.nav-burger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 4px;
+  border: none; background: none;
+}
+.nav-burger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--cream);
+  transition: all .28s ease;
+  transform-origin: center;
+}
+/* X animacija */
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ─── MOBILE NAV ─────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .nav-burger { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: var(--nav-h); left: 0; right: 0;
+    background: var(--header-bg);
+    flex-direction: column;
+    gap: 0; padding: 8px 0 20px;
+    border-bottom: 1px solid rgba(250,247,242,.12);
+    box-shadow: 0 8px 32px rgba(58,54,48,.15);
+  }
+  .nav-links.open { display: flex; }
+
+  .nav-links > li { width: 100%; }
+
+  .nav-links > li > a {
+    display: block;
+    padding: 14px clamp(24px, 6vw, 48px);
+    font-size: .78rem;
+    color: rgba(250,247,242,.85) !important;
+    border-bottom: 1px solid rgba(250,247,242,.08);
+  }
+  .nav-links > li > a:hover { color: var(--cream) !important; }
+
+  /* Dropdown na mobileu — uvijek vidljiv kad je nav otvoren */
+  .nav-links .has-dropdown > a::after { content: ' +'; }
+  .dropdown {
+    display: block;
+    position: static;
+    transform: none;
+    background: rgba(0,0,0,.12);
+    border: none; border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    min-width: unset;
+  }
+  .dropdown::before { display: none; }
+  .dropdown li a {
+    padding: 11px clamp(24px, 6vw, 48px) 11px calc(clamp(24px, 6vw, 48px) + 16px);
+    color: rgba(250,247,242,.65) !important;
+    font-size: .7rem;
+    border-top: 1px solid rgba(250,247,242,.06);
+  }
+  .dropdown li + li { border-top: none; }
+  .dropdown li a:hover {
+    background: rgba(0,0,0,.08);
+    color: var(--cream) !important;
+  }
+
+  /* CTA u mobilnom navu */
+  .nav-links .ncta {
+    margin: 14px clamp(24px, 6vw, 48px) 4px;
+    border-radius: 100px;
+    text-align: center;
+    display: block;
+    width: calc(100% - 2 * clamp(24px, 6vw, 48px));
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════════════════════════════ */
+footer {
+  background: var(--footer-bg);
+  padding: 68px 0 36px;
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 56px;
+  margin-bottom: 52px;
+}
+.ft-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; color: var(--cream);
+}
+.ft-logo small {
+  display: block;
+  font-family: 'Nunito', sans-serif; font-size: .58rem; font-weight: 400;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--moss-l); margin-top: 2px;
+}
+.ft-brand p {
+  margin-top: 18px; font-size: .82rem;
+  color: rgba(250,247,242,.38); max-width: 28ch;
+}
+.ft-col h5 {
+  font-family: 'Nunito', sans-serif; font-size: .64rem; font-weight: 400;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: var(--moss-l); margin-bottom: 18px;
+}
+.ft-col ul { list-style: none; }
+.ft-col ul li { margin-bottom: 10px; }
+.ft-col ul a {
+  font-size: .82rem;
+  color: rgba(250,247,242,.42);
+  transition: color .2s;
+}
+.ft-col ul a:hover { color: var(--cream); }
+.ft-bottom {
+  padding-top: 24px;
+  border-top: 1px solid rgba(250,247,242,.07);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px;
+  font-size: .68rem; color: rgba(250,247,242,.2); letter-spacing: .06em;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ─── FOOTER RESPONSIVE ──────────────────────────────────── */
+@media (max-width: 860px) {
+  .ft-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE — OPĆE
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  .two-col,
+  .two-col.flip {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 36px;
+  }
+  .two-col.flip { display: flex; flex-direction: column-reverse; }
+  .frame-tl::before,
+  .frame-br::after,
+  .circle-accent::before { display: none; }
+  .photo-r1, .photo-r2, .photo-r3 { height: clamp(240px, 56vw, 380px); }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  h2 { font-size: clamp(1.35rem, 5.5vw, 1.8rem); }
+  .section { padding: 56px 0; }
+  .strip-quote blockquote { font-size: 1rem; }
+}
