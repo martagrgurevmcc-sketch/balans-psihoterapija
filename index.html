@@ -121,13 +121,47 @@
 
     /* HERO RESPONSIVE */
     @media (max-width: 860px) {
-      #hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-r { display: none; }
-      .hero-l { padding: 48px clamp(20px,5vw,40px) 56px; }
+      #hero {
+        grid-template-columns: 1fr;
+        min-height: calc(100dvh - var(--nav-h));
+        position: relative;
+        overflow: hidden;
+      }
+      /* Slika ostaje kao pozadina na mobileu */
+      .hero-r {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+      .hero-r img {
+        width: 100%; height: 100%;
+        object-fit: cover; object-position: center 20%;
+        filter: saturate(.6) brightness(.55);
+      }
+      /* Overlay za čitljivost teksta */
+      .hero-r::after {
+        background:
+          linear-gradient(to bottom, rgba(242,236,228,.18) 0%, rgba(242,236,228,.72) 60%, var(--cream) 100%);
+      }
+      .hero-badge { display: none; }
+      .hero-l {
+        position: relative;
+        z-index: 1;
+        padding: clamp(48px,10vw,72px) clamp(24px,6vw,40px) clamp(56px,10vw,80px);
+        justify-content: flex-end;
+        min-height: calc(100dvh - var(--nav-h));
+      }
+      .hero-l h1 { color: var(--dark); }
+      .hero-l .label { color: var(--moss); }
+      .hero-sub { color: var(--muted); }
     }
     @media (max-width: 600px) {
       .hero-actions { flex-direction: column; align-items: stretch; }
       .hero-actions .btn { text-align: center; }
+      .hero-l h1 { font-size: clamp(2.2rem, 9vw, 2.8rem); }
+      .hero-tagline { font-size: 1.15rem; }
+      .hero-sub { font-size: 1rem; max-width: 100%; }
     }
 
     /* ══════════════════════════════════════
