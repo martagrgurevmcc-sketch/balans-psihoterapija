@@ -52,7 +52,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Nunito:wght@300;400&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Nunito:wght@300;400&display=swap" /></noscript>
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="css/style.css" />
@@ -104,7 +105,7 @@
     .hero-tagline {
       font-family: 'Playfair Display', serif; font-style: italic;
       font-size: clamp(1rem, 1.7vw, 1.3rem);
-      color: var(--tan); margin-bottom: 12px;
+      color: var(--gold); margin-bottom: 12px;
     }
     .hero-sub {
       max-width: 44ch; margin-bottom: 40px;
@@ -505,8 +506,10 @@
       -->
       <img
         src="slike/PsihoterapijaBalansnature.jpg"
+        srcset="slike/PsihoterapijaBalansnature-sm.jpg 900w, slike/PsihoterapijaBalansnature.jpg 1600w"
+        sizes="(max-width: 860px) 100vw, 50vw"
         alt="Mirno, podržavajuće okruženje za psihoterapiju"
-        width="900" height="900"
+        width="1600" height="900"
         loading="eager" fetchpriority="high" decoding="async"
       />
       <!-- Badge -->
@@ -744,21 +747,21 @@
             <div class="step">
               <span class="step-n">01</span>
               <div class="step-b">
-                <h4>Prvi susret</h4>
+                <h3>Prvi susret</h3>
                 <p>Razgovaramo o vašim temama, teškoćama i očekivanjima. Slušam s pažnjom i poštovanjem, bez osuđivanja i bez pritiska.</p>
               </div>
             </div>
             <div class="step">
               <span class="step-n">02</span>
               <div class="step-b">
-                <h4>Redoviti susreti</h4>
+                <h3>Redoviti susreti</h3>
                 <p>Susreti traju 60 minuta. U početku se najčešće dolazi jednom tjedno, a ritam se prilagođava vašim potrebama.</p>
               </div>
             </div>
             <div class="step">
               <span class="step-n">03</span>
               <div class="step-b">
-                <h4>Uživo ili online</h4>
+                <h3>Uživo ili online</h3>
                 <p>Terapija je dostupna uživo u Velikoj Gorici i online - birate što vam više odgovara.</p>
               </div>
             </div>
