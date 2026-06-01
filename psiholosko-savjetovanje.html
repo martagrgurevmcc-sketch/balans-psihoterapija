@@ -24,6 +24,44 @@
   <!-- Global CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="slike/PsihoterapijaBalanslogo.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#6e8878" />
+
+  <!-- Social / OG slika + Twitter -->
+  <meta property="og:site_name" content="Balans — Ana Leder, psihoterapija i savjetovanje" />
+  <meta property="og:locale" content="hr_HR" />
+  <meta property="og:image" content="https://psihoterapija-balans.hr/slike/PsihoterapijaBalansnature.jpg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="Balans — psihoterapija i savjetovanje, Velika Gorica" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Lokalni SEO (geo) -->
+  <meta name="author" content="Ana Leder" />
+  <meta name="geo.region" content="HR" />
+  <meta name="geo.placename" content="Velika Gorica" />
+  <meta name="geo.position" content="45.7153;16.0753" />
+  <meta name="ICBM" content="45.7153, 16.0753" />
+
+  <!-- Schema.org — Usluga -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Psihološko savjetovanje",
+    "name": "Psihološko savjetovanje Velika Gorica",
+    "url": "https://psihoterapija-balans.hr/psiholosko-savjetovanje.html",
+    "areaServed": { "@type": "City", "name": "Velika Gorica" },
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": "Balans — Ana Leder, psihoterapija i savjetovanje",
+      "telephone": "+385915246237",
+      "address": { "@type": "PostalAddress", "streetAddress": "Zagrebačka ul. 37", "addressLocality": "Velika Gorica", "postalCode": "10410", "addressCountry": "HR" }
+    }
+  }
+  </script>
+
   <style>
 
     /* ══════════════════════════════════════
@@ -52,7 +90,7 @@
       width: 100%; height: clamp(300px, 40vw, 480px);
       object-fit: cover;
       border-radius: 4px 52px 4px 52px;
-      filter: saturate(.72);
+      filter: saturate(.96);
     }
     /* Dekorativni okvir */
     .hero-sub-img { position: relative; }
@@ -95,7 +133,7 @@
       width: 100%; height: clamp(300px, 40vw, 460px);
       object-fit: cover; object-position: center center;
       border-radius: 52px 4px 52px 4px;
-      filter: saturate(.7);
+      filter: saturate(.96);
       margin-top: clamp(20px, 4vw, 60px); /* pomak dolje da se centrira */
     }
 
@@ -125,7 +163,7 @@
       width: 100%; height: clamp(280px, 38vw, 440px);
       object-fit: cover;
       border-radius: 4px 52px 4px 52px;
-      filter: saturate(.7);
+      filter: saturate(.96);
     }
 
     @media (max-width: 860px) {
@@ -293,7 +331,7 @@
     }
     #cta-final::before {
       content: ''; position: absolute; inset: 0;
-      background: url('slike/cta-bg.jpg') center/cover no-repeat;
+      background: url('slike/PsihoterapijaBalansnature.jpg') center/cover no-repeat;
       opacity: .06; filter: saturate(.2);
     }
     .cta-box {
@@ -365,7 +403,7 @@
           <img
             src="slike/Naturehappy.avif"
             alt="Psihološko savjetovanje — prostor za razmišljanje i razgovor"
-            width="700" height="480" loading="eager"
+            width="700" height="480" loading="eager" fetchpriority="high" decoding="async"
           />
         </div>
 
@@ -406,7 +444,7 @@
             src="slike/„Balans nije život bez napetosti. Balans je sposobnost vraćanja u stabilnost..jpg"
             alt="Siguran prostor za savjetovanje i podršku"
             width="600" height="460" loading="lazy"
-            style="width:100%; height:clamp(300px,40vw,460px); object-fit:cover; border-radius:52px 4px 52px 4px; filter:saturate(.7);"
+            style="width:100%; height:clamp(300px,40vw,460px); object-fit:cover; border-radius:52px 4px 52px 4px; filter:saturate(.96);"
           />
         </div>
 
@@ -428,10 +466,10 @@
             <img src="slike/savjetovanje-za-koga.jpg" alt="Za koga je psihološko savjetovanje" width="600" height="440" loading="lazy" />
           -->
           <img
-            src="slike/Psihoterapijabalansnature.jpeg"
+            src="slike/PsihoterapijaBalansnature.jpg"
             alt="Savjetovanje za sve koji osjećaju da im treba podrška"
             width="600" height="440" loading="lazy"
-            style="width:100%; height:clamp(280px,38vw,440px); object-fit:cover; border-radius:52px 4px 52px 4px; filter:saturate(.7);"
+            style="width:100%; height:clamp(280px,38vw,440px); object-fit:cover; border-radius:52px 4px 52px 4px; filter:saturate(.96);"
           />
         </div>
 
@@ -647,7 +685,7 @@
           -->
           <img
             class="photo-main photo-r2"
-            src="slike/PsihoterapijaBalansVelikaGoricaAnaLeder.jpg"
+            src="slike/PsihoterapijaBalansVelikaGoricaAnaLeder.jpeg"
             alt="Ana Leder, psihoterapeutkinja i savjetovateljica u Velikoj Gorici"
             width="600" height="540" loading="lazy"
           />

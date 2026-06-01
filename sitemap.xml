@@ -4,44 +4,41 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://psihoterapija-balans.hr/</loc>
-  <lastmod>2026-05-02T16:51:22+00:00</lastmod>
+  <lastmod>2026-06-01</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://psihoterapija-balans.hr/individualna-psihoterapija</loc>
-  <lastmod>2026-05-02T16:51:22+00:00</lastmod>
+  <loc>https://psihoterapija-balans.hr/individualna-psihoterapija.html</loc>
+  <lastmod>2026-06-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://psihoterapija-balans.hr/partnerska-psihoterapija</loc>
-  <lastmod>2026-05-02T16:51:22+00:00</lastmod>
+  <loc>https://psihoterapija-balans.hr/partnerska-psihoterapija.html</loc>
+  <lastmod>2026-06-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://psihoterapija-balans.hr/psiholosko-savjetovanje</loc>
-  <lastmod>2026-05-02T16:51:22+00:00</lastmod>
+  <loc>https://psihoterapija-balans.hr/psiholosko-savjetovanje.html</loc>
+  <lastmod>2026-06-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://psihoterapija-balans.hr/o-meni</loc>
-  <lastmod>2026-05-02T16:51:22+00:00</lastmod>
+  <loc>https://psihoterapija-balans.hr/o-meni.html</loc>
+  <lastmod>2026-06-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://psihoterapija-balans.hr/proces-pitanja</loc>
-  <lastmod>2026-05-02T16:51:22+00:00</lastmod>
+  <loc>https://psihoterapija-balans.hr/proces-pitanja.html</loc>
+  <lastmod>2026-06-01</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://psihoterapija-balans.hr/kontakt</loc>
-  <lastmod>2026-05-02T16:51:22+00:00</lastmod>
+  <loc>https://psihoterapija-balans.hr/kontakt.html</loc>
+  <lastmod>2026-06-01</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>

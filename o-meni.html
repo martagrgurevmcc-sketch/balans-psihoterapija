@@ -24,6 +24,24 @@
   <!-- Global CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="slike/PsihoterapijaBalanslogo.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#6e8878" />
+
+  <!-- Social / OG slika + Twitter -->
+  <meta property="og:site_name" content="Balans — Ana Leder, psihoterapija i savjetovanje" />
+  <meta property="og:locale" content="hr_HR" />
+  <meta property="og:image" content="https://psihoterapija-balans.hr/slike/AnaLedersavjetovanje.jpg" />
+  <meta property="og:image:alt" content="Ana Leder, psihoterapeutkinja — Balans, Velika Gorica" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Lokalni SEO (geo) -->
+  <meta name="author" content="Ana Leder" />
+  <meta name="geo.region" content="HR" />
+  <meta name="geo.placename" content="Velika Gorica" />
+  <meta name="geo.position" content="45.7153;16.0753" />
+  <meta name="ICBM" content="45.7153, 16.0753" />
+
   <style>
 
     /* ══════════════════════════════════════
@@ -72,7 +90,7 @@
       width: 100%; height: clamp(300px, 42vw, 520px);
       object-fit: cover; object-position: center top;
       border-radius: 4px 52px 4px 52px;
-      filter: saturate(.78);
+      filter: saturate(.98);
       display: block;
     }
     .hero-about-img::after {
@@ -136,7 +154,7 @@
       width: 100%; height: clamp(200px, 24vw, 280px);
       object-fit: cover;
       border-radius: 4px 36px 4px 36px;
-      filter: saturate(.65);
+      filter: saturate(.96);
     }
 
     @media (max-width: 860px) {
@@ -173,7 +191,7 @@
       width: 100%; height: clamp(300px, 40vw, 480px);
       object-fit: cover;
       border-radius: 52px 4px 52px 4px;
-      filter: saturate(.7);
+      filter: saturate(.96);
     }
 
     @media (max-width: 860px) {
@@ -213,7 +231,7 @@
       width: 100%; height: clamp(280px, 38vw, 440px);
       object-fit: cover;
       border-radius: 4px 52px 4px 52px;
-      filter: saturate(.68);
+      filter: saturate(.96);
     }
 
     @media (max-width: 860px) {
@@ -252,7 +270,7 @@
       width: 100%; height: clamp(200px, 26vw, 300px);
       object-fit: cover;
       border-radius: 4px 36px 4px 36px;
-      filter: saturate(.65);
+      filter: saturate(.96);
       margin-bottom: 28px;
     }
 
@@ -280,7 +298,7 @@
     /* ══════════════════════════════════════
        SEKCIJA — EDUKACIJA
     ══════════════════════════════════════ */
-    #education { background: var(--canvas); }
+    #education { background: var(--cream); }
 
     .edu-grid {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -337,7 +355,7 @@
       width: 100%; height: clamp(180px, 22vw, 240px);
       object-fit: cover;
       border-radius: 4px 36px 4px 36px;
-      filter: saturate(.65);
+      filter: saturate(.96);
     }
 
     @media (max-width: 860px) {
@@ -347,7 +365,7 @@
     /* ══════════════════════════════════════
        SEKCIJA — OSOBNO
     ══════════════════════════════════════ */
-    #personal { background: var(--cream); }
+    #personal { background: var(--canvas); }
 
     .personal-grid {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -371,7 +389,7 @@
       width: 100%; height: clamp(300px, 40vw, 460px);
       object-fit: cover;
       border-radius: 4px 52px 4px 52px;
-      filter: saturate(.72);
+      filter: saturate(.96);
     }
 
     @media (max-width: 860px) {
@@ -383,11 +401,11 @@
     ══════════════════════════════════════ */
     #cta-final {
       padding: clamp(80px, 10vw, 140px) 0;
-      background: var(--canvas); position: relative; overflow: hidden;
+      background: var(--cream); position: relative; overflow: hidden;
     }
     #cta-final::before {
       content: ''; position: absolute; inset: 0;
-      background: url('slike/cta-bg.jpg') center/cover no-repeat;
+      background: url('slike/PsihoterapijaBalansnature.jpg') center/cover no-repeat;
       opacity: .06; filter: saturate(.2);
     }
     .cta-box {
@@ -462,10 +480,97 @@
             <img src="slike/ana-leder-portret.jpg" alt="Ana Leder, psihoterapeutkinja u Velikoj Gorici" width="700" height="680" loading="eager" />
           -->
           <img
-            src="slike/PsihoterapijaBalansAnaLeder.jpg"
+            src="slike/AnaLedersavjetovanje.jpg"
             alt="Ana Leder, psihoterapeutkinja u Velikoj Gorici"
-            width="700" height="680" loading="eager"
+            width="700" height="680" loading="eager" fetchpriority="high" decoding="async"
           />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SEKCIJA — EDUKACIJA I STRUČNOST  (premješteno odmah ispod hero)
+  ══════════════════════════════════════════════════════════ -->
+  <section id="education" class="section" aria-label="Edukacija i stručnost — Ana Leder">
+    <div class="wrap">
+      <div class="edu-grid">
+
+        <div class="edu-text rv">
+          <span class="label">Edukacija</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Edukacija i stručnost</h2>
+
+          <ul class="edu-list">
+            <li class="edu-item">
+              <span class="edu-num">01</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Članica Hrvatske komore psihoterapeuta</span>
+                <span class="edu-item-sub">Strukovno članstvo i etički standardi</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">02</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Magistra društveno-humanističkih znanosti</span>
+                <span class="edu-item-sub">Visokoškolska edukacija</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">03</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Četverogodišnja edukacija iz logoterapije i egzistencijalne analize</span>
+                <span class="edu-item-sub">HCLEA</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">04</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Edukacija iz propedeutike psihoterapije</span>
+                <span class="edu-item-sub">Algebra - Bernays veleučilište</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">05</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Edukacija iz transakcijske analize (TA)</span>
+                <span class="edu-item-sub">Dodatno stručno usavršavanje</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">06</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Otvorena edukacija iz dječje i adolescentske Gestalt terapije</span>
+                <span class="edu-item-sub">IGW</span>
+              </div>
+            </li>
+            <li class="edu-item">
+              <span class="edu-num">07</span>
+              <div class="edu-item-text">
+                <span class="edu-item-title">Brojni seminari i stručna usavršavanja</span>
+                <span class="edu-item-sub">Kontinuirano višegodišnje usavršavanje</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="edu-right rv">
+          <div class="membership-badge">
+            <div class="badge-icon">A</div>
+            <div class="badge-text">
+              <strong>Hrvatska komora psihoterapeuta</strong>
+              <p>Ana Leder je savjetodavni psihoterapeut i član Hrvatske komore psihoterapeuta - tijela koje osigurava etičke standarde i stručnu razinu psihoterapeutskog rada u Hrvatskoj.</p>
+            </div>
+          </div>
+          <div class="edu-img">
+            <img
+              src="slike/PsihoterapijaBalansVelikaGoricaprostor.jpeg"
+              alt="Terapijski prostor Balans u Velikoj Gorici"
+              width="600" height="220" loading="lazy"
+            />
+          </div>
         </div>
 
       </div>
@@ -526,9 +631,9 @@
             <img src="slike/o-meni-pristup.jpg" alt="Pristup terapiji — topao i profesionalan" width="600" height="480" loading="lazy" />
           -->
           <img
-            src="slike/AnaLederBalans.jpg"
+            src="slike/AnaLederkuci.jpeg"
             alt="Pažljiv i profesionalan pristup terapiji"
-            width="600" height="480" loading="lazy"
+            width="600" height="480" loading="lazy" decoding="async"
           />
         </div>
 
@@ -587,6 +692,7 @@
           <img
             src="slike/psihoterapijavelikagoricafotelja.jpeg"
             alt="Siguran, povjerljiv terapijski odnos"
+            decoding="async"
             width="600" height="440" loading="lazy"
           />
         </div>
@@ -620,10 +726,10 @@
             <img class... src="slike/balans-filozofija.jpg" ... />
           -->
           <img
-            src="slike/Psihoterapijabalansnature.jpeg"
+            src="slike/PsihoterapijaBalansnature.jpg"
             alt="Unutarnja ravnoteža i stabilnost"
             width="600" height="240" loading="lazy"
-            style="width:100%; height:clamp(180px,22vw,240px); object-fit:cover; border-radius:4px 36px 4px 36px; filter:saturate(.65);"
+            style="width:100%; height:clamp(180px,22vw,240px); object-fit:cover; border-radius:4px 36px 4px 36px; filter:saturate(.96);"
           />
         </div>
 
@@ -670,90 +776,6 @@
 
 
   <!-- ══════════════════════════════════════════════════════════
-       SEKCIJA — EDUKACIJA
-  ══════════════════════════════════════════════════════════ -->
-  <section id="education" class="section" aria-label="Edukacija i stručnost — Ana Leder">
-    <div class="wrap">
-      <div class="edu-grid">
-
-        <div class="edu-text rv">
-          <span class="label">Edukacija</span>
-          <div class="rule" style="margin-top:14px;"></div>
-          <h2>Edukacija i stručnost</h2>
-
-          <ul class="edu-list">
-            <li class="edu-item">
-              <span class="edu-num">01</span>
-              <div class="edu-item-text">
-                <span class="edu-item-title">Magistra društveno-humanističkih znanosti</span>
-                <span class="edu-item-sub">Visokoškolska edukacija</span>
-              </div>
-            </li>
-            <li class="edu-item">
-              <span class="edu-num">02</span>
-              <div class="edu-item-text">
-                <span class="edu-item-title">Četverogodišnja edukacija iz logoterapije i egzistencijalne analize</span>
-                <span class="edu-item-sub">HCLEA</span>
-              </div>
-            </li>
-            <li class="edu-item">
-              <span class="edu-num">03</span>
-              <div class="edu-item-text">
-                <span class="edu-item-title">Edukacija iz propedeutike psihoterapije</span>
-                <span class="edu-item-sub">Algebra - Bernays veleučilište</span>
-              </div>
-            </li>
-            <li class="edu-item">
-              <span class="edu-num">04</span>
-              <div class="edu-item-text">
-                <span class="edu-item-title">Edukacija iz transakcijske analize (TA)</span>
-                <span class="edu-item-sub">Dodatno stručno usavršavanje</span>
-              </div>
-            </li>
-            <li class="edu-item">
-              <span class="edu-num">05</span>
-              <div class="edu-item-text">
-                <span class="edu-item-title">Otvorena edukacija iz dječje i adolescentske Gestalt terapije</span>
-                <span class="edu-item-sub">IGW</span>
-              </div>
-            </li>
-            <li class="edu-item">
-              <span class="edu-num">06</span>
-              <div class="edu-item-text">
-                <span class="edu-item-title">Brojni seminari i stručna usavršavanja</span>
-                <span class="edu-item-sub">Kontinuirano višegodišnje usavršavanje</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="edu-right rv">
-          <div class="membership-badge">
-            <div class="badge-icon">A</div>
-            <div class="badge-text">
-              <strong>Hrvatska komora psihoterapeuta</strong>
-              <p>Ana Leder je aktivna članica Hrvatske komore psihoterapeuta - tijela koje osigurava etičke standarde i stručnu razinu psihoterapeutskog rada u Hrvatskoj.</p>
-            </div>
-          </div>
-          <!--
-            PLACEHOLDER:
-            <img src="slike/edukacija.jpg" alt="Stručna edukacija i usavršavanje" width="600" height="220" loading="lazy" />
-          -->
-          <div class="edu-img">
-            <img
-              src="slike/AnaLederBalans.jpg"
-              alt="Stručnost i kontinuirano usavršavanje"
-              width="600" height="220" loading="lazy"
-            />
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════════════════════
        SEKCIJA — NEŠTO OSOBNO
   ══════════════════════════════════════════════════════════ -->
   <section id="personal" class="section" aria-label="Nešto osobno o Ani Leder">
@@ -782,10 +804,10 @@
             <img src="slike/ana-osobno.jpg" alt="Ana Leder — izvan terapijske sobe" width="600" height="460" loading="lazy" />
           -->
           <img
-            src="slike/AnaLeder.jpg"
+            src="slike/AnaLeder.jpeg"
             alt="Ana Leder — izvan terapijske sobe"
             width="600" height="460" loading="lazy"
-            style="width:100%; height:clamp(300px,40vw,460px); object-fit:cover; object-position:center top; border-radius:52px 4px 52px 4px; filter:saturate(.72);"
+            style="width:100%; height:clamp(300px,40vw,460px); object-fit:cover; object-position:center top; border-radius:52px 4px 52px 4px; filter:saturate(.96);"
           />
         </div>
 

@@ -1,0 +1,7 @@
+# Hi-res sigurnosne kopije originalnih slika — čuvaju se lokalno,
+# ne idu u repo ni na deploy (stranica ih ne koristi).
+slike/original/
+
+# OS / editor smeće
+Thumbs.db
+.DS_Store

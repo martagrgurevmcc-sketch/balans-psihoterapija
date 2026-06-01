@@ -3,7 +3,8 @@
    Fontovi: Playfair Display (serif) + Nunito (sans)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400&display=swap');
+/* Fontovi se učitavaju preko <link> u <head> svake stranice (preconnect + display=swap),
+   pa je @import ovdje namjerno uklonjen — uklanja blokirajući, dvostruki zahtjev. */
 
 /* ─── RESET ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,15 +14,15 @@ a    { color: inherit; text-decoration: none; }
 
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
 :root {
-  --dark:    #3a3630;
-  --moss:    #6e8878;
+  --dark:    #322e29;   /* malo dublja za jači kontrast naslova */
+  --moss:    #4f7059;   /* dublji, čitljiviji i vibrantniji zeleni akcent */
   --moss-l:  #8fa68a;
-  --clay:    #d4b8ac;
-  --clay-l:  #e8d5cb;
+  --clay:    #c9a892;   /* topliji, vidljiviji clay za rubove i akcente */
+  --clay-l:  #e0c8ba;
   --canvas:  #f2ece4;
   --cream:   #faf7f2;
-  --tan:     #c9b49a;
-  --muted:   #8a7e75;
+  --tan:     #b3935f;   /* dublji zlatni — čitljiv kao tekst-akcent */
+  --muted:   #5f574e;   /* znatno tamniji tekst — bolja čitljivost (WCAG AA) */
 
   --header-bg: #6e8878;    /* moss — header pozadina */
   --footer-bg: #3a3630;    /* dark — footer pozadina */
@@ -126,7 +127,7 @@ p  {
 
 /* ─── FOTO STILOVI ───────────────────────────────────────── */
 .photo-wrap { position: relative; }
-.photo-main { width: 100%; object-fit: cover; filter: saturate(.72); }
+.photo-main { width: 100%; object-fit: cover; filter: saturate(.96); }
 .photo-r1 { height: clamp(320px, 42vw, 520px); border-radius: 4px 52px 4px 52px; }
 .photo-r2 { height: clamp(340px, 44vw, 540px); border-radius: 52px 4px 52px 4px; }
 .photo-r3 { height: clamp(320px, 42vw, 520px); border-radius: 4px 52px 4px 52px; }
@@ -467,7 +468,7 @@ footer {
 }
 .ft-brand p {
   margin-top: 18px; font-size: .82rem;
-  color: rgba(250,247,242,.38); max-width: 28ch;
+  color: rgba(250,247,242,.6); max-width: 28ch;
 }
 .ft-col h5 {
   font-family: 'Nunito', sans-serif; font-size: .64rem; font-weight: 400;
@@ -478,7 +479,7 @@ footer {
 .ft-col ul li { margin-bottom: 10px; }
 .ft-col ul a {
   font-size: .82rem;
-  color: rgba(250,247,242,.42);
+  color: rgba(250,247,242,.66);
   transition: color .2s;
 }
 .ft-col ul a:hover { color: var(--cream); }
@@ -487,7 +488,7 @@ footer {
   border-top: 1px solid rgba(250,247,242,.07);
   display: flex; justify-content: space-between; align-items: center;
   flex-wrap: wrap; gap: 10px;
-  font-size: .68rem; color: rgba(250,247,242,.2); letter-spacing: .06em;
+  font-size: .68rem; color: rgba(250,247,242,.5); letter-spacing: .06em;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -581,4 +582,63 @@ footer {
   }
   .hero-actions .btn { text-align: center; }
   .hero-actions .link-arrow { justify-content: center; padding: 8px 0; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   POLISH — elevacija fotografija + osvježeni okviri (svi uređaji)
+   ════════════════════════════════════════════════════════════ */
+.photo-main,
+.empathy-img img,
+.hero-about-img img,
+.approach-img img,
+.rel-img img,
+.personal-img img,
+.intro-img img,
+.meaning-r-img,
+.edu-img img {
+  box-shadow: 0 16px 44px rgba(50,46,41,.14);
+}
+.photo-main { transition: transform .4s ease, box-shadow .4s ease; }
+.photo-wrap:hover .photo-main {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 60px rgba(50,46,41,.2);
+}
+
+/* ════════════════════════════════════════════════════════════
+   MOBILE-FIRST ČITLJIVOST — veći, ugodniji tekst na telefonima
+   html-prefiks namjerno podiže specifičnost da nadjača
+   stranica-specifične (sitne) veličine fonta.
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  /* Tijelo teksta u karticama, listama i citatima → ~1rem */
+  html .s-card p,
+  html .q-card,
+  html .obj-pt p,
+  html .m-list li,
+  html .step-b p,
+  html .rel-box p,
+  html .balans-item-text,
+  html .intro-highlight,
+  html .faq-body p,
+  html .faq-body .ans-list li,
+  html .ft-col ul a,
+  html .ft-brand p { font-size: 1.02rem; line-height: 1.8; }
+
+  html .obj-note,
+  html .balans-quote,
+  html .italic-note { font-size: 1.08rem; line-height: 1.65; }
+
+  html .edu-item-title { font-size: 1rem; }
+  html .edu-item-sub,
+  html .about-cred { font-size: .86rem; }
+
+  /* Chip / eyebrow oznake — male, ali čitljive */
+  html .method-tag,
+  html .fact-tag { font-size: .8rem; padding: 9px 18px; }
+  html .step-b h4,
+  html .rel-box-title { font-size: .82rem; }
+
+  /* Veći tap-targeti za linkove sa strelicom */
+  html .link-arrow { font-size: .82rem; }
 }
