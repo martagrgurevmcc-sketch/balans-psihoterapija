@@ -550,7 +550,7 @@ footer {
   h1 { font-size: clamp(2rem, 8.5vw, 2.6rem); }
   h2 { font-size: clamp(1.55rem, 6.5vw, 2rem); }
   h3 { font-size: clamp(1.15rem, 4vw, 1.4rem); }
-  p  { font-size: clamp(1rem, 3.5vw, 1.08rem); }
+  p  { font-size: 1.04rem; }
   .section { padding: 56px 0; }
   .strip-quote blockquote { font-size: 1.1rem; }
   .label { font-size: .72rem; letter-spacing: .22em; }
@@ -643,7 +643,7 @@ footer {
    ════════════════════════════════════════════════════════════ */
 @media (max-width: 600px) {
 
-  /* Tijelo teksta u karticama, listama i citatima → ~1rem */
+  /* ── Ujednačen body-text na mobitelu (~1.04rem) ── */
   html .s-card p,
   html .q-card,
   html .obj-pt p,
@@ -651,15 +651,30 @@ footer {
   html .step-b p,
   html .rel-box p,
   html .balans-item-text,
-  html .intro-highlight,
   html .faq-body p,
   html .faq-body .ans-list li,
+  html .address-line,
+  html .online-note,
+  html .emp-q,
+  html .help-card p,
+  html .price-details li,
+  html .direct-links a,
+  html .hero-sub,
   html .ft-col ul a,
-  html .ft-brand p { font-size: 1.02rem; line-height: 1.8; }
+  html .ft-brand p { font-size: 1.04rem; line-height: 1.85; }
+
+  /* Intro/lead rečenice (imaju jaču specifičnost po stranicama) — !important da se ujednače */
+  html .lead { font-size: 1.06rem !important; line-height: 1.7; }
+
+  /* Form polja ≥16px — sprječava iOS auto-zoom pri fokusu + čitljivost */
+  html .form-input,
+  html .form-select,
+  html .form-textarea { font-size: 1rem; }
 
   html .obj-note,
+  html .intro-highlight,
   html .balans-quote,
-  html .italic-note { font-size: 1.08rem; line-height: 1.65; }
+  html .italic-note { font-size: 1.08rem; line-height: 1.7; }
 
   html .edu-item-title { font-size: 1rem; }
   html .edu-item-sub,
