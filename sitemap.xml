@@ -21,7 +21,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://psihoterapija-balans.hr/psiholosko-savjetovanje.html</loc>
+  <loc>https://psihoterapija-balans.hr/savjetovanje.html</loc>
   <lastmod>2026-06-01</lastmod>
   <priority>0.80</priority>
 </url>
@@ -34,6 +34,11 @@
   <loc>https://psihoterapija-balans.hr/proces-pitanja.html</loc>
   <lastmod>2026-06-01</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://psihoterapija-balans.hr/cjenik.html</loc>
+  <lastmod>2026-06-20</lastmod>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://psihoterapija-balans.hr/kontakt.html</loc>
