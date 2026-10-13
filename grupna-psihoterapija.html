@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Grupna psihoterapija Velika Gorica | Balans — Ana Leder</title>
+  <meta name="description" content="Grupna psihoterapija u Velikoj Gorici — rad kroz odnose s drugima, kroz tematske cikluse. Ciklus Autobiografija vode Ana Leder i Irena Starman Frančić. Uživo i iznimno online." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://psihoterapija-balans.hr/grupna-psihoterapija.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Grupna psihoterapija Velika Gorica | Balans — Ana Leder" />
+  <meta property="og:description" content="Terapijski prostor u kojem radite na sebi kroz odnose s drugima. Tematski ciklus Autobiografija — Ana Leder i Irena Starman Frančić." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://psihoterapija-balans.hr/grupna-psihoterapija.html" />
+
+  <!-- Schema.org — usluga -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Grupna psihoterapija",
+    "name": "Grupna psihoterapija Velika Gorica",
+    "url": "https://psihoterapija-balans.hr/grupna-psihoterapija.html",
+    "areaServed": { "@type": "City", "name": "Velika Gorica" },
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": "Balans — Ana Leder, psihoterapija i savjetovanje",
+      "telephone": "+385915246237",
+      "address": { "@type": "PostalAddress", "streetAddress": "Zagrebačka ul. 37b", "addressLocality": "Velika Gorica", "postalCode": "10410", "addressCountry": "HR" }
+    }
+  }
+  </script>
+
+  <!-- Schema.org — FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Hoće li ono što kažem ostati u grupi?", "acceptedAnswer": { "@type": "Answer", "text": "Povjerljivost je jedan od temelja grupne psihoterapije. Prije početka svi članovi potpisuju suglasnost, a o pravilima razgovaramo i na prvom susretu. Ono što se u grupi govori ostaje u grupi — članovi izvan nje ne prepričavaju tuđe priče, informacije ni identitet." } },
+      { "@type": "Question", "name": "Mogu li se priključiti grupi nakon što je ciklus već počeo?", "acceptedAnswer": { "@type": "Answer", "text": "Grupe su većinom zatvorene i novi se članovi nakon početka ciklusa u pravilu ne uključuju, jer se teme nadograđuju iz susreta u susret. Ako Vas zanima grupa čiji je ciklus već počeo, možete ostaviti interes za sljedeći." } },
+      { "@type": "Question", "name": "Mogu li istodobno ići na grupnu i individualnu psihoterapiju?", "acceptedAnswer": { "@type": "Answer", "text": "Možete, ali ne kod istog terapeuta istodobno. Ako individualnu psihoterapiju želite kod istog terapeuta koji vodi grupu, u pravilu se jedno nastavlja nakon završetka drugoga — to je etički najčišća praksa." } },
+      { "@type": "Question", "name": "Nisam siguran/na odgovara li mi grupna psihoterapija?", "acceptedAnswer": { "@type": "Answer", "text": "Možete dogovoriti jedan individualni susret na kojem zajedno procjenjujemo odgovara li Vam grupni rad i koja bi grupa za Vas mogla biti primjerena." } }
+    ]
+  }
+  </script>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="slike/PsihoterapijaBalanslogo.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#6e8878" />
+
+  <!-- Social / OG slika + Twitter -->
+  <meta property="og:site_name" content="Balans — Ana Leder, psihoterapija i savjetovanje" />
+  <meta property="og:locale" content="hr_HR" />
+  <meta property="og:image" content="https://psihoterapija-balans.hr/slike/PsihoterapijaBalansVelikaGoricainterije.jpeg" />
+  <meta property="og:image:alt" content="Grupna psihoterapija — Balans, Velika Gorica" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Lokalni SEO (geo) -->
+  <meta name="author" content="Ana Leder" />
+  <meta name="geo.region" content="HR" />
+  <meta name="geo.placename" content="Velika Gorica" />
+  <meta name="geo.position" content="45.7153;16.0753" />
+  <meta name="ICBM" content="45.7153, 16.0753" />
+
+  <!-- Fonts — self-hosted woff2 (bez vanjskih zahtjeva); preload kritičnih (latin) za brzi LCP -->
+  <link rel="preload" as="font" type="font/woff2" href="fonts/playfair-latin.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="fonts/nunito-latin.woff2" crossorigin />
+
+  <style>
+
+    /* ── HERO ── */
+    #hero-group { padding-top: var(--nav-h); background: var(--canvas); }
+    .group-hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(44px, 7vw, 100px); align-items: center;
+      padding: clamp(48px, 7vw, 90px) 0;
+    }
+    .group-hero-text .label { margin-bottom: 18px; }
+    .group-hero-text h1 { margin-bottom: 20px; line-height: 1.2; }
+    .group-hero-text .lead {
+      font-size: clamp(.95rem, 1.4vw, 1.08rem); color: var(--muted);
+      line-height: 1.95; max-width: 46ch; margin-bottom: 32px;
+    }
+    .group-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .group-hero-img img {
+      width: 100%; height: clamp(300px, 40vw, 480px);
+      object-fit: cover; border-radius: 4px 52px 4px 52px;
+      filter: saturate(.96);
+    }
+    @media (max-width: 860px) {
+      .group-hero-inner { grid-template-columns: 1fr; padding: 40px 0; gap: 34px; }
+      .group-hero-img img { height: clamp(240px, 60vw, 360px); }
+    }
+
+    /* ── UVOD ── */
+    #group-intro { background: var(--cream); }
+    .gi-text { max-width: 64ch; }
+    .gi-text p + p { margin-top: 16px; }
+    .gi-note {
+      margin-top: 28px; padding: 22px 26px;
+      background: var(--canvas); border-left: 3px solid var(--moss);
+      border-radius: 0 8px 8px 0;
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(.95rem, 1.4vw, 1.08rem); color: var(--dark); line-height: 1.65;
+    }
+
+    /* ── POPIS S OZNAKOM ── */
+    .g-list { list-style: none; margin-top: 8px; }
+    .g-list li {
+      display: grid; grid-template-columns: 18px 1fr; gap: 14px; align-items: start;
+      padding: 14px 0; border-bottom: 1px solid var(--clay-l);
+      font-size: .9rem; color: var(--muted); font-weight: 300; line-height: 1.75;
+    }
+    .g-list li:first-child { border-top: 1px solid var(--clay-l); }
+    .g-list li::before { content: '→'; color: var(--moss); font-size: .8rem; margin-top: 4px; }
+
+    /* ── ZA KOGA / KADA INDIVIDUALNI ── */
+    #group-audience { background: var(--canvas); }
+    .aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3vw, 28px); }
+    .aud-box {
+      padding: clamp(28px, 3.2vw, 40px) clamp(24px, 2.6vw, 34px);
+      background: var(--cream); border: 1px solid var(--clay-l); border-radius: 12px;
+    }
+    .aud-box h3 { margin-bottom: 18px; }
+    .aud-box .g-list li { font-size: .88rem; }
+    @media (max-width: 760px) { .aud-grid { grid-template-columns: 1fr; } }
+
+    /* ── KAKO IZGLEDA RAD (steps) ── */
+    #group-how { background: var(--cream); }
+
+    /* ── CIKLUS: AUTOBIOGRAFIJA ── */
+    #cycle { background: var(--canvas); }
+    .cycle-card {
+      background: var(--cream); border: 1px solid var(--clay-l);
+      border-radius: 14px; overflow: hidden;
+      display: grid; grid-template-columns: 1.1fr .9fr;
+    }
+    .cycle-body { padding: clamp(32px, 4vw, 56px); }
+    .cycle-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Nunito', sans-serif; font-size: .62rem; font-weight: 400;
+      letter-spacing: .2em; text-transform: uppercase; color: var(--moss);
+      border: 1px solid var(--clay-l); background: var(--canvas);
+      padding: 7px 16px; border-radius: 100px; margin-bottom: 20px;
+    }
+    .cycle-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--moss); }
+    .cycle-body h2 { margin-bottom: 18px; }
+    .cycle-body p + p { margin-top: 14px; }
+    .cycle-sub {
+      font-family: 'Nunito', sans-serif; font-size: .74rem; font-weight: 400;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--dark);
+      margin: 28px 0 14px; display: block;
+    }
+    .cycle-meta {
+      margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--clay-l);
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .cycle-tag {
+      font-family: 'Nunito', sans-serif; font-size: .68rem; font-weight: 300;
+      letter-spacing: .06em; color: var(--muted);
+      background: var(--canvas); border: 1px solid var(--clay-l);
+      padding: 8px 16px; border-radius: 100px;
+    }
+    .cycle-leaders {
+      margin-top: 18px; font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: 1rem; color: var(--moss);
+    }
+    .cycle-aside {
+      background: var(--canvas); position: relative; min-height: 260px;
+    }
+    .cycle-aside img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.96); }
+    @media (max-width: 860px) {
+      .cycle-card { grid-template-columns: 1fr; }
+      .cycle-aside { min-height: 220px; }
+    }
+
+    /* ── CITAT ── */
+    #group-quote { background: var(--cream); }
+    .gq-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+    .gq-inner blockquote {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: clamp(1.2rem, 2.4vw, 1.75rem); color: var(--dark);
+      line-height: 1.5; margin-bottom: 18px;
+    }
+    .gq-inner cite {
+      font-family: 'Nunito', sans-serif; font-size: .66rem; font-weight: 400;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--moss); font-style: normal;
+    }
+
+    /* ── VODITELJI ── */
+    #group-leaders { background: var(--canvas); }
+    .leaders { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3vw, 28px); margin-top: 8px; }
+    .leader {
+      padding: clamp(28px, 3vw, 38px) clamp(24px, 2.6vw, 32px);
+      background: var(--cream); border: 1px solid var(--clay-l); border-radius: 12px;
+    }
+    .leader-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--dark); margin-bottom: 4px; }
+    .leader-role {
+      font-family: 'Nunito', sans-serif; font-size: .66rem; font-weight: 400;
+      letter-spacing: .16em; text-transform: uppercase; color: var(--moss);
+      display: block; margin-bottom: 16px;
+    }
+    .leader p { font-size: .9rem; }
+    @media (max-width: 760px) { .leaders { grid-template-columns: 1fr; } }
+
+    /* ── PRAKTIČNE INFORMACIJE ── */
+    #group-practical { background: var(--cream); }
+
+    /* ── FAQ ── */
+    #group-faq { background: var(--canvas); }
+    .gfaq { max-width: 760px; }
+    .gfaq-item { border-bottom: 1px solid var(--clay-l); }
+    .gfaq-item:first-of-type { border-top: 1px solid var(--clay-l); }
+    .gfaq-trigger {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0;
+    }
+    .gfaq-q {
+      font-family: 'Playfair Display', serif; font-size: clamp(.98rem, 1.3vw, 1.08rem);
+      color: var(--dark); line-height: 1.4; text-align: left;
+    }
+    .gfaq-icon {
+      width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--clay-l);
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s;
+    }
+    .gfaq-icon svg { width: 12px; height: 12px; transition: transform .3s ease; }
+    .gfaq-item.open .gfaq-icon { background: var(--moss); border-color: var(--moss); }
+    .gfaq-item.open .gfaq-icon svg { transform: rotate(45deg); }
+    .gfaq-item.open .gfaq-icon svg path { stroke: var(--cream); }
+    .gfaq-body { display: none; padding: 0 0 24px; }
+    .gfaq-item.open .gfaq-body { display: block; }
+    .gfaq-body p { font-size: .9rem; line-height: 1.95; margin: 0; }
+    .gfaq-body p + p { margin-top: 12px; }
+
+    /* ── CTA ── */
+    #cta-final { padding: clamp(80px, 10vw, 140px) 0; background: var(--cream); position: relative; overflow: hidden; }
+    #cta-final::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('slike/PsihoterapijaBalansnature.jpg') center/cover no-repeat;
+      opacity: .06; filter: saturate(.2);
+    }
+    .cta-box { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; text-align: center; }
+    .cta-box h2 { margin-bottom: 20px; }
+    .cta-box p { max-width: 54ch; margin: 0 auto; }
+    .cta-btns { margin-top: 40px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<nav id="site-nav">
+  <div class="wrap nav-i">
+    <a href="index.html" class="nav-logo" aria-label="Balans Ana Leder — povratak na naslovnicu">
+      <img src="slike/PsihoterapijaBalanslogo.svg" alt="Balans — Ana Leder, psihoterapija i savjetovanje" width="52" height="52" />
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Otvori izbornik" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html">Naslovna</a></li>
+      <li class="has-dropdown">
+        <a href="#" aria-haspopup="true">Usluge</a>
+        <ul class="dropdown" role="list">
+          <li><a href="individualna-psihoterapija.html">Individualna psihoterapija</a></li>
+          <li><a href="partnerska-psihoterapija.html">Partnerska psihoterapija</a></li>
+          <li><a href="grupna-psihoterapija.html">Grupna psihoterapija</a></li>
+          <li><a href="savjetovanje.html">Savjetovanje</a></li>
+        </ul>
+      </li>
+      <li><a href="o-meni.html">O meni</a></li>
+      <li><a href="proces-pitanja.html">Proces</a></li>
+      <li><a href="cjenik.html">Cjenik</a></li>
+      <li><a href="kontakt.html" class="ncta">Dogovorite razgovor</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /HEADER -->
+
+
+<main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero-group" aria-label="Grupna psihoterapija">
+    <div class="wrap">
+      <div class="group-hero-inner">
+        <div class="group-hero-text rv">
+          <span class="label">Usluge · Grupna psihoterapija</span>
+          <h1>Grupna psihoterapija<br><em>Velika Gorica</em></h1>
+          <p class="lead">Grupna psihoterapija je terapijski prostor u kojem ne radite na sebi samo u odnosu s terapeutom, nego i kroz odnose s drugim ljudima. Grupe vodim u suradnji s kolegicom i provode se kroz unaprijed osmišljene tematske cikluse.</p>
+          <div class="group-hero-actions">
+            <a href="#cycle" class="btn btn-dark">Pogledajte ciklus</a>
+            <a href="kontakt.html" class="link-arrow">Zanima me sljedeći ciklus</a>
+          </div>
+        </div>
+        <div class="group-hero-img rv">
+          <img
+            src="slike/PsihoterapijaBalansVelikaGoricainterije.jpeg"
+            alt="Prostor za grupnu psihoterapiju — Balans, Velika Gorica"
+            width="700" height="480" loading="eager" fetchpriority="high" decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       UVOD — ŠTO JE GRUPNA PSIHOTERAPIJA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="group-intro" class="section" aria-label="Što je grupna psihoterapija">
+    <div class="wrap">
+      <div class="rv">
+        <span class="label">Što je grupna psihoterapija</span>
+        <div class="rule" style="margin-top:14px;"></div>
+      </div>
+      <div class="gi-text rv">
+        <p>Grupu čini nekoliko članova koji se redovito susreću i zajedno stvaraju prostor u kojem mogu govoriti o sebi, svojim iskustvima, odnosima, teškoćama i onome što im se događa upravo u tom trenutku.</p>
+        <p>Posebno je vrijedno to što u grupi ne razgovaramo samo o odnosima koje imate izvan nje. Obrasci koji se ponavljaju u vašem životu često se počnu pojavljivati i unutar same grupe. Tada ih možemo primijetiti, istražiti i pokušati doživjeti drugačije — u stvarnom odnosu s drugim ljudima.</p>
+        <div class="gi-note">Odnosi i interakcije među članovima jedan su od ključnih terapijskih elemenata grupne psihoterapije.</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       ŠTO GRUPA NUDI
+  ══════════════════════════════════════════════════════════ -->
+  <section id="group-offer" class="section" aria-label="Što grupa nudi" style="background:var(--canvas);">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="text-block rv">
+          <span class="label">Zašto grupa</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Što grupa nudi, a drugačije je od rada jedan na jedan?</h2>
+          <p>Jedna od važnih stvari u grupnoj psihoterapiji jest iskustvo da nismo jedini. Dok slušate druge kako govore o svojim iskustvima, često prepoznate dijelove sebe i vidite da se s nekim teškoćama, osjećajima ili obrascima ne susrećete samo vi.</p>
+          <p>Grupa istodobno donosi više različitih perspektiva. Pitanja, reakcije i iskustva drugih članova mogu otvoriti nešto što u razgovoru jedan na jedan možda ne biste tako lako vidjeli.</p>
+          <p>Ali grupa nije samo mjesto na kojem govorimo o odnosima — ona je svojevrsni mali društveni sustav u kojem se odnosi stvarno događaju. Netko može prvi put reći što stvarno misli, postaviti granicu ili pokazati ranjivost i vidjeti što se dogodi kada to napravi.</p>
+        </div>
+        <div class="rv">
+          <span class="cycle-sub" style="margin-top:0;">U grupi je moguće</span>
+          <ul class="g-list">
+            <li>Iskustvo da niste jedini s određenom teškoćom ili osjećajem</li>
+            <li>Više perspektiva — reakcije i uvidi drugih članova</li>
+            <li>Primijetiti vlastite obrasce dok se stvarno događaju</li>
+            <li>Vježbati nešto drugačije u sigurnom odnosu s drugima</li>
+            <li>Razvijati kvalitetniju komunikaciju i emocionalnu povezanost</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       JE LI ZA MENE
+  ══════════════════════════════════════════════════════════ -->
+  <section id="group-audience" class="section" aria-label="Je li grupna psihoterapija za mene">
+    <div class="wrap">
+      <div class="rv" style="margin-bottom:40px; max-width:640px;">
+        <span class="label">Je li za mene</span>
+        <div class="rule" style="margin-top:14px;"></div>
+        <h2>Je li grupna psihoterapija za vas?</h2>
+        <p>Grupni rad posebno može biti vrijedan ako se osjećate usamljeno, teško pronalazite svoje mjesto u odnosima, primjećujete da ponavljate iste obrasce ili želite razvijati kvalitetniju povezanost s drugima. Važno je imati motivaciju za grupni rad i spremnost da proces nije usmjeren samo na vas.</p>
+      </div>
+
+      <div class="aud-grid">
+        <div class="aud-box rv">
+          <h3>Grupa vam može odgovarati ako…</h3>
+          <ul class="g-list">
+            <li>se osjećate usamljeno ili izolirano</li>
+            <li>teško pronalazite svoje mjesto u odnosima</li>
+            <li>primjećujete da ponavljate iste obrasce</li>
+            <li>želite razvijati komunikaciju i povezanost</li>
+            <li>prepoznajete se u temi određenog ciklusa</li>
+          </ul>
+        </div>
+        <div class="aud-box rv">
+          <h3>Kada je prikladniji individualni rad</h3>
+          <p style="margin-bottom:14px;">Grupna psihoterapija nije univerzalno rješenje. Ponekad je <a href="individualna-psihoterapija.html" class="link-arrow" style="display:inline-flex; font-size:.72rem;">individualni rad</a> prikladniji:</p>
+          <ul class="g-list">
+            <li>kada vam je potrebna veća razina privatnosti</li>
+            <li>u akutnoj krizi ili izraženoj emocionalnoj nestabilnosti</li>
+            <li>kada problem traži vrlo individualiziran pristup</li>
+          </ul>
+          <p style="margin-top:16px; font-size:.86rem;">Najvažnije pitanje nije samo je li grupna terapija dobra, nego je li ona u ovom trenutku dobra za ovu konkretnu osobu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       KAKO IZGLEDA RAD
+  ══════════════════════════════════════════════════════════ -->
+  <section id="group-how" class="section" aria-label="Kako izgleda rad u grupi">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="text-block rv">
+          <span class="label">Kako radimo</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Kako izgleda ciklus i susret?</h2>
+          <p>Grupe su strukturirane oko određene teme i provode se kroz unaprijed definirane cikluse. Isti članovi zajedno prolaze dogovoreni broj susreta. Grupe su većinom zatvorene — novi se članovi nakon početka u pravilu ne uključuju, jer se teme nadograđuju iz susreta u susret.</p>
+          <p>Ne morate doći potpuno spremni i otvoreni. Sasvim je u redu prvo promatrati, slušati i upoznavati prostor i ljude — povjerenje se gradi kroz iskustvo, u vašem tempu i unutar dovoljno velike sigurnosti.</p>
+        </div>
+        <div class="rv">
+          <div class="steps">
+            <div class="step">
+              <span class="step-n">01</span>
+              <div class="step-b">
+                <h3>Jedan susret — dva sata</h3>
+                <p>Susret traje dva sata, a grupu vode dva terapeuta. Na prvom susretu upoznajemo temu, pravila i način rada te počinjemo stvarati atmosferu povjerenja.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-n">02</span>
+              <div class="step-b">
+                <h3>Zašto dva terapeuta</h3>
+                <p>Dva terapeuta omogućuju da se kvalitetnije posvetimo članovima i istodobno pratimo što se događa u cijeloj grupi.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-n">03</span>
+              <div class="step-b">
+                <h3>Zašto je važna redovitost</h3>
+                <p>Teme se međusobno nadograđuju. Izostanak otežava praćenje procesa i utječe na dinamiku grupe, pa je o odsutnosti važno obavijestiti unaprijed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       TEMATSKI CIKLUS — AUTOBIOGRAFIJA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="cycle" class="section" aria-label="Tematski ciklus Autobiografija">
+    <div class="wrap">
+      <div class="rv" style="margin-bottom:36px; max-width:640px;">
+        <span class="label">Tematski ciklus</span>
+        <div class="rule" style="margin-top:14px;"></div>
+        <h2>Ciklus koji vodim s kolegicom</h2>
+        <p>Grupe se organiziraju kroz unaprijed osmišljene tematske cikluse. Ciklus <strong style="color:var(--moss); font-weight:400;">Autobiografija</strong> vodim zajedno s kolegicom Irenom Starman Frančić.</p>
+      </div>
+
+      <div class="cycle-card rv">
+        <div class="cycle-body">
+          <span class="cycle-badge">Logoterapijska metoda</span>
+          <h2>Autobiografija</h2>
+          <p>Autobiografija je specifična logoterapijska metoda, strukturirana prema radu E. Lukas, usmjerena na upoznavanje sebe i dublje sagledavanje vlastitoga životnog puta. Kroz ciklus se osvrćemo na pojedina životna razdoblja, njihov utjecaj na sadašnjost, ali i na ono što želite i očekujete od budućnosti.</p>
+          <p>Na neki način pišemo vlastitu priču: gledamo ono što se već dogodilo i biramo što želimo i možemo u budućnosti.</p>
+
+          <span class="cycle-sub">Kako izgleda rad</span>
+          <p>Ciklus je podijeljen na tematske cjeline koje kronološki prate životni put. Za svaki susret članovi dobivaju zadatak i pripremaju se za sljedeću temu. Na susretu svatko prolazi svoju temu pred grupom te dobiva refleksije drugih članova i terapeuta.</p>
+
+          <span class="cycle-sub">Čime se bavimo</span>
+          <ul class="g-list">
+            <li>upoznavanjem vlastite prošlosti i prihvaćanjem onoga na što nemamo utjecaj</li>
+            <li>sagledavanjem vlastitih obrazaca u širem obiteljskom i društvenom kontekstu</li>
+            <li>preuzimanjem odgovornosti za vlastiti život</li>
+            <li>otvaranjem novim mogućnostima</li>
+            <li>pronalaženjem životne zadaće</li>
+          </ul>
+
+          <div class="cycle-meta">
+            <span class="cycle-tag">10 susreta</span>
+            <span class="cycle-tag">8–10 sudionika</span>
+            <span class="cycle-tag">Velika Gorica ili Zagreb, ovisno o ciklusu</span>
+            <span class="cycle-tag">iznimno online</span>
+          </div>
+          <p class="cycle-leaders">Ciklus vode Ana Leder i Irena Starman Frančić.</p>
+
+          <div style="margin-top:28px;">
+            <a href="kontakt.html" class="btn btn-dark">Zanima me sljedeći ciklus</a>
+          </div>
+        </div>
+        <div class="cycle-aside">
+          <img src="slike/cvijece.jpg" alt="Autobiografija — ciklus grupne psihoterapije" width="600" height="700" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CITAT
+  ══════════════════════════════════════════════════════════ -->
+  <section id="group-quote" class="section" aria-label="Misao o grupnoj psihoterapiji">
+    <div class="wrap">
+      <div class="gq-inner rv">
+        <blockquote>„Najvažnije je ne pitati samo je li grupna terapija dobra, nego je li ona u ovom trenutku dobra za ovu konkretnu osobu."</blockquote>
+        <cite>— Irena Starman Frančić</cite>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       VODITELJI
+  ══════════════════════════════════════════════════════════ -->
+  <section id="group-leaders" class="section" aria-label="Tko vodi grupe">
+    <div class="wrap">
+      <div class="rv" style="margin-bottom:36px; max-width:640px;">
+        <span class="label">Voditelji</span>
+        <div class="rule" style="margin-top:14px;"></div>
+        <h2>Tko vodi ciklus Autobiografija</h2>
+        <p>Grupe se uvijek vode u suradnji dvoje terapeuta. Promjena se u grupnom radu ne događa samo kroz razumijevanje, nego kroz iskustvo odnosa — a mnogo toga događa se upravo između članova.</p>
+      </div>
+
+      <div class="leaders">
+        <div class="leader rv">
+          <div class="leader-name">Ana Leder</div>
+          <span class="leader-role">Psihoterapeut · Balans, Velika Gorica</span>
+          <p>Logoterapeutkinja i savjetodavni psihoterapeut, članica Hrvatske komore psihoterapeuta. U radu njeguje siguran, podržavajući i autentičan odnos. <a href="o-meni.html" class="link-arrow" style="display:inline-flex; font-size:.72rem;">Više o meni</a></p>
+        </div>
+        <div class="leader rv">
+          <div class="leader-name">Irena Starman Frančić</div>
+          <span class="leader-role">Psihologinja i psihoterapeutkinja</span>
+          <p>Diplomirana psihologinja i psihoterapeutkinja, članica Hrvatske komore psihoterapeuta. Ciklus Autobiografija vodi zajedno s Anom Leder; i sama je prošla ovu vrstu terapije te provela nekoliko ciklusa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       PRAKTIČNE INFORMACIJE
+  ══════════════════════════════════════════════════════════ -->
+  <section id="group-practical" class="section" aria-label="Praktične informacije">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="text-block rv">
+          <span class="label">Praktično</span>
+          <div class="rule" style="margin-top:14px;"></div>
+          <h2>Praktične informacije o grupnoj psihoterapiji</h2>
+          <p>Grupna psihoterapija ne provodi se kontinuirano tijekom cijele godine, nego kroz unaprijed definirane cikluse koji se pokreću kada se skupi dovoljan broj zainteresiranih.</p>
+          <p>Ako niste sigurni odgovara li vam grupni rad, možete doći na individualni susret na kojem zajedno procijenimo odgovara li vam grupna psihoterapija i koja bi vam grupa mogla odgovarati.</p>
+        </div>
+        <div class="rv">
+          <ul class="g-list">
+            <li>jedan grupni susret traje 2 sata</li>
+            <li>grupe najčešće imaju 8–10 članova</li>
+            <li>ciklus se formira kada se skupi dovoljan broj zainteresiranih</li>
+            <li>grupe su većinom zatvorene — nakon početka se novi članovi u pravilu ne uključuju</li>
+            <li>svaki ciklus ima unaprijed definiranu temu i broj susreta</li>
+            <li>susreti se održavaju uživo u Velikoj Gorici ili Zagrebu, ovisno o ciklusu</li>
+            <li>online format moguć je iznimno, ovisno o ciklusu</li>
+            <li>cijena se definira i objavljuje uz svaki konkretan ciklus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════════════════════════ -->
+  <section id="group-faq" class="section" aria-label="Česta pitanja o grupnoj psihoterapiji">
+    <div class="wrap">
+      <div class="rv" style="margin-bottom:36px;">
+        <span class="label">Česta pitanja</span>
+        <div class="rule" style="margin-top:14px;"></div>
+        <h2>Česta pitanja o grupnoj psihoterapiji</h2>
+      </div>
+
+      <div class="gfaq">
+        <div class="gfaq-item">
+          <button class="gfaq-trigger" aria-expanded="false">
+            <span class="gfaq-q">Hoće li ono što kažem ostati u grupi?</span>
+            <span class="gfaq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1V11M1 6H11" stroke="#6e8878" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="gfaq-body">
+            <p>Povjerljivost je jedan od temelja grupne psihoterapije. Prije početka svi članovi potpisuju suglasnost, a o pravilima razgovaramo i na prvom susretu. Ono što se u grupi govori ostaje u grupi — članovi izvan nje ne prepričavaju tuđe priče, informacije ni identitet.</p>
+            <p>Za razliku od individualne terapije, terapeut ne može kontrolirati što će druga osoba napraviti nakon susreta, pa je povjerljivost zajednički dogovor i odgovornost svih članova.</p>
+          </div>
+        </div>
+        <div class="gfaq-item">
+          <button class="gfaq-trigger" aria-expanded="false">
+            <span class="gfaq-q">Što ako mi je neugodno govoriti o sebi pred drugima?</span>
+            <span class="gfaq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1V11M1 6H11" stroke="#6e8878" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="gfaq-body">
+            <p>To je jedan od čestih strahova prije uključivanja u grupu i sasvim je razumljiv. Ne morate doći potpuno spremni i otvoreni — u redu je prvo promatrati, slušati i upoznavati prostor i ljude. Povjerenje se gradi kroz iskustvo, u vašem tempu i unutar dovoljno velike sigurnosti, a ne zato što vas netko prisiljava.</p>
+          </div>
+        </div>
+        <div class="gfaq-item">
+          <button class="gfaq-trigger" aria-expanded="false">
+            <span class="gfaq-q">Što ako o nečemu ne želim govoriti?</span>
+            <span class="gfaq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1V11M1 6H11" stroke="#6e8878" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="gfaq-body">
+            <p>Ne morate govoriti o nečemu za što niste spremni — u grupi ne postoji prisiljavanje na otkrivanje osobnih sadržaja. Ponekad i sama rečenica „O tome ne želim govoriti" može biti vrijedan terapijski trenutak. Imate pravo na granicu, a i odnos prema toj granici može postati dio procesa.</p>
+          </div>
+        </div>
+        <div class="gfaq-item">
+          <button class="gfaq-trigger" aria-expanded="false">
+            <span class="gfaq-q">Što ako se s nekim članom ne slažem?</span>
+            <span class="gfaq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1V11M1 6H11" stroke="#6e8878" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="gfaq-body">
+            <p>Grupa nije mjesto na kojem svi moraju misliti isto. Neslaganje samo po sebi nije problem i može postati vrijedan dio terapijskog procesa. Učimo da se možemo ne slagati, a da pritom ne napadnemo drugu osobu, ne povučemo se i ne prekinemo odnos. Ako vas nešto naljuti ili povrijedi, o tome se može govoriti.</p>
+          </div>
+        </div>
+        <div class="gfaq-item">
+          <button class="gfaq-trigger" aria-expanded="false">
+            <span class="gfaq-q">Mogu li se priključiti grupi nakon što je ciklus već počeo?</span>
+            <span class="gfaq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1V11M1 6H11" stroke="#6e8878" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="gfaq-body">
+            <p>Grupe su većinom zatvorene i novi se članovi nakon početka u pravilu ne uključuju, jer se teme nadograđuju iz susreta u susret, a uključivanje nove osobe može utjecati na već uspostavljenu dinamiku. Ako vas zanima grupa čiji je ciklus već počeo, možete ostaviti interes za sljedeći.</p>
+          </div>
+        </div>
+        <div class="gfaq-item">
+          <button class="gfaq-trigger" aria-expanded="false">
+            <span class="gfaq-q">Mogu li istodobno ići na grupnu i individualnu psihoterapiju?</span>
+            <span class="gfaq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1V11M1 6H11" stroke="#6e8878" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="gfaq-body">
+            <p>Možete — ali ne kod istog terapeuta istodobno. Ako individualnu psihoterapiju želite kod istog terapeuta koji vodi grupu, u pravilu se jedno nastavlja nakon završetka drugoga. To je etički najčišća praksa jer višestruka uloga ne bi smjela ugroziti dobrobit klijenta ni profesionalnu procjenu.</p>
+          </div>
+        </div>
+        <div class="gfaq-item">
+          <button class="gfaq-trigger" aria-expanded="false">
+            <span class="gfaq-q">Nisam siguran/na odgovara li mi grupna psihoterapija?</span>
+            <span class="gfaq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1V11M1 6H11" stroke="#6e8878" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="gfaq-body">
+            <p>Možete dogovoriti jedan individualni susret na kojem zajedno procijenimo odgovara li vam grupni rad i koja bi grupa za vas mogla biti primjerena. Cilj nije uklopiti osobu u određeni oblik terapije, nego pronaći okvir u kojem će se moći osjećati dovoljno sigurno i napraviti stvarni pomak.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       ZAVRŠNI CTA
+  ══════════════════════════════════════════════════════════ -->
+  <section id="cta-final" aria-label="Zanima vas sljedeći ciklus">
+    <div class="wrap">
+      <div class="cta-box rv">
+        <span class="label">Sljedeći ciklus</span>
+        <div class="rule center" style="margin-top:14px;"></div>
+        <h2>Zanima vas sljedeći ciklus?</h2>
+        <p>Grupe se organiziraju kroz unaprijed definirane cikluse. Ako vas zanima Autobiografija, ostavite svoj kontakt — javit ćemo vam detalje o terminu, mjestu i uvjetima sudjelovanja kada krene novi ciklus.</p>
+        <div class="cta-btns">
+          <a href="kontakt.html" class="btn btn-dark">Zanima me sljedeći ciklus</a>
+          <a href="individualna-psihoterapija.html" class="btn btn-ghost">Individualni rad</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-logo">
+          Ana Leder
+          <small>Balans · Psihoterapija i savjetovanje</small>
+        </div>
+        <p>Siguran prostor za razgovor, razumijevanje i unutarnju ravnotežu — u Velikoj Gorici i online.</p>
+      </div>
+      <div class="ft-col">
+        <h5>Usluge</h5>
+        <ul>
+          <li><a href="individualna-psihoterapija.html">Individualna psihoterapija</a></li>
+          <li><a href="partnerska-psihoterapija.html">Partnerska psihoterapija</a></li>
+          <li><a href="grupna-psihoterapija.html">Grupna psihoterapija</a></li>
+          <li><a href="savjetovanje.html">Savjetovanje</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Informacije</h5>
+        <ul>
+          <li><a href="o-meni.html">O meni</a></li>
+          <li><a href="proces-pitanja.html">Kako terapija izgleda</a></li>
+          <li><a href="cjenik.html">Cjenik</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 Ana Leder · Balans. Sva prava pridržana.</span>
+      <span>Psihoterapija i savjetovanje Velika Gorica</span>
+    </div>
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+
+<!-- ═══════════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+  const burger   = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  burger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('.dropdown a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', scrollY > 30);
+  }, { passive: true });
+  const revealEls = document.querySelectorAll('.rv');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => io.observe(el));
+
+  /* FAQ accordion */
+  document.querySelectorAll('.gfaq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.gfaq-item');
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open', !isOpen);
+      trigger.setAttribute('aria-expanded', !isOpen);
+    });
+  });
+</script>
+
+</body>
+</html>
