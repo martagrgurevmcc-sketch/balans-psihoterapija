@@ -375,9 +375,10 @@
           <!--
             Formspree integracija (https://formspree.io/f/mjgzbbpe):
             - action → Formspree endpoint, method POST
-            - _gotcha → skriveni honeypot (spam zaštita)
             - _subject → naslov e-maila koji stiže Ani
             - polje name="email" Formspree automatski koristi kao reply-to
+            NAPOMENA: honeypot (_gotcha) uklonjen jer je mogao tiho odbaciti
+            legitimne upite kao spam. Oslanjamo se na Formspree spam zaštitu.
           -->
           <form
             id="contact-form"
@@ -385,11 +386,8 @@
             method="POST"
             novalidate
           >
-            <!-- Formspree skrivena polja -->
+            <!-- Formspree skriveno polje: naslov e-maila -->
             <input type="hidden" name="_subject" value="Novi upit s web stranice — Balans" />
-            <p style="display:none;" aria-hidden="true">
-              <label>Ne ispunjavajte ovo polje: <input name="_gotcha" tabindex="-1" autocomplete="off" /></label>
-            </p>
 
             <!-- Ime + Prezime -->
             <div class="form-row">
